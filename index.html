@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME Bodocó - Portal BNCC Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <img src="https://via.placeholder.com/80x80?text=Logo+Bodocó" alt="Logo Bodocó" class="logo-img">
+                <div class="header-titles">
+                    <h1>Prefeitura de Bodocó</h1>
+                    <h2>Secretaria Municipal de Educação</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="app-nav">
+        <div class="nav-scroll">
+            <button class="nav-item active" onclick="navigate('infantil')">👶 Infantil</button>
+            <button class="nav-item" onclick="navigate('fundamental')">📘 Fundamental</button>
+            <button class="nav-item" onclick="navigate('computacao')">💻 Computação</button>
+            <button class="nav-item" onclick="navigate('atividades')">✏️ Atividades</button>
+            <button class="nav-item" onclick="navigate('segura')">🚨 Escola Segura</button>
+            <button class="nav-item" onclick="navigate('gestao')">⚙️ Gestão</button>
+        </div>
+    </nav>
+
+    <main id="app-view">
+        </main>
+
+    <div id="toast">✅ Alterações salvas com sucesso!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
