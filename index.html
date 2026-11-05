@@ -1,43 +1,601 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SME Bodocó - Portal BNCC Digital</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNCC Computação Bodocó — Rede Municipal de Ensino</title>
+  <meta name="description" content="Portal de apoio à BNCC Computação para educadores da Rede Municipal de Ensino de Bodocó.">
+  <!-- Tipografia Inter para leitura fluida e profissional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --verde-bandeira-escuro: #004D2C;
+      --verde-bandeira: #006B3F;
+      --verde-suave: #EBF5F0;
+      --verde-borda: #C2E2D3;
+      --fundo-branco: #FFFFFF;
+      --fundo-pagina: #FAFCFA;
+      --cinza-texto: #2D3748;
+      --cinza-leve: #F0F4F2;
+      --sombra: 0 4px 14px rgba(0, 107, 63, 0.08);
+      --sombra-card: 0 6px 20px rgba(0, 0, 0, 0.05);
+      --raio: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--fundo-pagina);
+      color: var(--cinza-texto);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TOPO INSTITUCIONAL */
+    .topbar {
+      background-color: var(--verde-bandeira-escuro);
+      color: #FFFFFF;
+      padding: 8px 24px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* CABEÇALHO PRINCIPAL */
+    header {
+      background-color: var(--fundo-branco);
+      border-bottom: 3px solid var(--verde-bandeira);
+      box-shadow: var(--sombra);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-pmb {
+      width: min(100%, 300px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    .brand-titles h1 {
+      color: var(--verde-bandeira);
+      font-size: 1.4rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-titles p {
+      color: var(--verde-bandeira-escuro);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--verde-bandeira);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--verde-suave);
+      color: var(--verde-bandeira-escuro);
+    }
+
+    /* CONTAINER PRINCIPAL */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    /* BANNER DE BOAS-VINDAS */
+    .hero-card {
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--verde-suave) 100%);
+      border: 1px solid var(--verde-borda);
+      border-left: 6px solid var(--verde-bandeira);
+      border-radius: var(--raio);
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-card h2 {
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      color: var(--cinza-texto);
+      font-size: 1.05rem;
+      max-width: 900px;
+    }
+
+    /* ÁREA DE BUSCA E FILTROS */
+    .search-panel {
+      background-color: var(--fundo-branco);
+      border: 1px solid var(--verde-borda);
+      border-radius: var(--raio);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--sombra-card);
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .search-panel input, .search-panel select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--verde-borda);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+      color: var(--cinza-texto);
+      background-color: #FFFFFF;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-panel label {
+      display: block;
+      color: var(--verde-bandeira-escuro);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .search-panel input:focus, .search-panel select:focus {
+      border-color: var(--verde-bandeira);
+      box-shadow: 0 0 0 3px rgba(0, 107, 63, 0.15);
+    }
+
+    /* SEÇÃO DE CÓDIGOS ALFANUMÉRICOS */
+    .section-title {
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 36px 0 18px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 22px;
+      background-color: var(--verde-bandeira);
+      border-radius: 3px;
+    }
+
+    .code-explanation {
+      background: var(--fundo-branco);
+      border: 1px solid var(--verde-borda);
+      border-radius: var(--raio);
+      padding: 20px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .code-badge-block {
+      flex: 1;
+      min-width: 140px;
+      padding: 12px;
+      background: var(--verde-suave);
+      border-radius: 8px;
+    }
+
+    .code-badge-block .tag {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--verde-bandeira);
+      display: block;
+    }
+
+    .code-badge-block span {
+      font-size: 0.85rem;
+      color: var(--verde-bandeira-escuro);
+      font-weight: 600;
+    }
+
+    /* GRADE DE COMPETÊNCIAS / HABILIDADES */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--fundo-branco);
+      border: 1px solid #E2E8F0;
+      border-top: 4px solid var(--verde-bandeira);
+      border-radius: var(--raio);
+      padding: 22px;
+      box-shadow: var(--sombra-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 107, 63, 0.12);
+    }
+
+    .card-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: var(--verde-suave);
+      color: var(--verde-bandeira);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #718096;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card h3 {
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--cinza-texto);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .card[hidden], .no-results[hidden] {
+      display: none;
+    }
+
+    .results-status, .no-results, .source-note {
+      margin: 0 0 18px;
+    }
+
+    .results-status {
+      font-weight: 600;
+    }
+
+    .no-results, .source-note {
+      padding: 18px 20px;
+      border: 1px solid var(--verde-borda);
+      border-radius: var(--raio);
+      background: var(--fundo-branco);
+    }
+
+    .source-note {
+      border-left: 5px solid var(--verde-bandeira);
+      background: var(--verde-suave);
+    }
+
+    .source-note a {
+      color: var(--verde-bandeira-escuro);
+      font-weight: 700;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background-color: var(--verde-bandeira-escuro);
+      color: #FFFFFF;
+      margin-top: 60px;
+      padding: 32px 24px 20px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .search-panel {
+        grid-template-columns: 1fr;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo-area">
-                <img src="https://via.placeholder.com/80x80?text=Logo+Bodocó" alt="Logo Bodocó" class="logo-img">
-                <div class="header-titles">
-                    <h1>Prefeitura de Bodocó</h1>
-                    <h2>Secretaria Municipal de Educação</h2>
-                </div>
-            </div>
+  <!-- Barra Superior de Apoio -->
+  <aside class="topbar">
+    <span>Prefeitura Municipal de Bodocó — Secretaria Municipal de Educação</span>
+    <span>Planejamento Pedagógico & BNCC</span>
+  </aside>
+
+  <!-- Cabeçalho Institucional -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <img class="logo-pmb" src="logo-bodoco.png" alt="Prefeitura Municipal de Bodocó">
+        <div class="brand-titles">
+          <h1>BNCC Computação Bodocó</h1>
+          <p>Rede Municipal de Ensino</p>
         </div>
-    </header>
+      </div>
+      <nav>
+        <a href="#pensamento-computacional">Pensamento Computacional</a>
+        <a href="#mundo-digital">Mundo Digital</a>
+        <a href="#cultura-digital">Cultura Digital</a>
+        <a href="#consulta">Consultar conteúdos</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="app-nav">
-        <div class="nav-scroll">
-            <button class="nav-item active" onclick="navigate('infantil')">👶 Infantil</button>
-            <button class="nav-item" onclick="navigate('fundamental')">📘 Fundamental</button>
-            <button class="nav-item" onclick="navigate('computacao')">💻 Computação</button>
-            <button class="nav-item" onclick="navigate('atividades')">✏️ Atividades</button>
-            <button class="nav-item" onclick="navigate('segura')">🚨 Escola Segura</button>
-            <button class="nav-item" onclick="navigate('gestao')">⚙️ Gestão</button>
+  <main class="container">
+    <!-- Bloco de Apresentação aos Docentes -->
+    <section class="hero-card">
+      <h2>BNCC Computação na rede municipal de Bodocó</h2>
+      <p>
+      Um espaço de apoio ao planejamento pedagógico e à integração da Computação às aprendizagens dos estudantes. Explore os três eixos da BNCC Computação e filtre os conteúdos por etapa de ensino.
+      </p>
+    </section>
+
+    <h2 class="section-title" id="codigos">Como ler os códigos</h2>
+    <div class="code-explanation">
+      <div class="code-badge-block">
+        <span class="tag">EF</span>
+        <span>Ensino Fundamental</span>
+      </div>
+      <div class="code-badge-block">
+        <span class="tag">01 a 09</span>
+        <span>Ano ou grupo de anos</span>
+      </div>
+      <div class="code-badge-block">
+        <span class="tag">CO</span>
+        <span>Computação</span>
+      </div>
+      <div class="code-badge-block">
+        <span class="tag">01 em diante</span>
+        <span>Identificador da habilidade</span>
+      </div>
+    </div>
+
+    <p class="source-note">
+      Esta página traz uma síntese autoral para apoiar o planejamento, não a transcrição integral da matriz nem a redação oficial das habilidades. Consulte a
+      <a href="https://www.gov.br/mec/pt-br/cne" target="_blank" rel="noopener noreferrer">Resolução CNE/CEB nº 1, de 4 de outubro de 2022, e o complemento oficial de Computação à BNCC</a>
+      para conferir a matriz completa e sua redação normativa.
+    </p>
+
+    <h2 class="section-title" id="consulta">Consultar conteúdos de Computação</h2>
+    <div class="search-panel">
+      <div>
+        <label for="searchInput">Palavra-chave</label>
+        <input type="search" id="searchInput" placeholder="Ex.: algoritmo, dados, segurança">
+      </div>
+      <div>
+        <label for="stageFilter">Etapa de ensino</label>
+        <select id="stageFilter">
+          <option value="all">Todas as etapas</option>
+          <option value="EI">Educação Infantil</option>
+          <option value="EF1">Ensino Fundamental — anos iniciais</option>
+          <option value="EF2">Ensino Fundamental — anos finais</option>
+        </select>
+      </div>
+      <div>
+        <label for="axisFilter">Eixo da Computação</label>
+        <select id="axisFilter">
+          <option value="all">Todos os eixos</option>
+          <option value="pensamento">Pensamento Computacional</option>
+          <option value="mundo">Mundo Digital</option>
+          <option value="cultura">Cultura Digital</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="results-status" id="resultsStatus" aria-live="polite"></p>
+    <div class="grid-cards" id="cardsGrid">
+      <article class="card" id="pensamento-computacional" data-stage="EI EF1" data-axis="pensamento">
+        <div>
+          <span class="card-tag">Pensamento Computacional</span>
+          <div class="card-meta">Educação Infantil e anos iniciais</div>
+          <h3>Sequências, padrões e instruções</h3>
+          <p>Proponha brincadeiras para identificar padrões, ordenar passos e descrever instruções, usando materiais concretos e situações do cotidiano.</p>
         </div>
-    </nav>
+      </article>
 
-    <main id="app-view">
-        </main>
+      <article class="card" data-stage="EF1 EF2" data-axis="pensamento">
+        <div>
+          <span class="card-tag">Pensamento Computacional</span>
+          <div class="card-meta">Ensino Fundamental</div>
+          <h3>Decomposição e algoritmos</h3>
+          <p>Divida um problema em partes menores e organize instruções para solucioná-lo, comparando estratégias com atividades desplugadas ou digitais.</p>
+        </div>
+      </article>
 
-    <div id="toast">✅ Alterações salvas com sucesso!</div>
+      <article class="card" data-stage="EF2" data-axis="pensamento">
+        <div>
+          <span class="card-tag">Pensamento Computacional</span>
+          <div class="card-meta">Anos finais</div>
+          <h3>Programação, testes e depuração</h3>
+          <p>Crie e avalie procedimentos ou programas, teste possibilidades, identifique erros e aperfeiçoe soluções para desafios escolares e comunitários.</p>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="card" id="mundo-digital" data-stage="EI EF1" data-axis="mundo">
+        <div>
+          <span class="card-tag">Mundo Digital</span>
+          <div class="card-meta">Educação Infantil e anos iniciais</div>
+          <h3>Dispositivos e representação de informações</h3>
+          <p>Explore como dispositivos recebem, representam, armazenam e comunicam informações, com atividades concretas e recursos disponíveis na escola.</p>
+        </div>
+      </article>
+
+      <article class="card" data-stage="EF1 EF2" data-axis="mundo">
+        <div>
+          <span class="card-tag">Mundo Digital</span>
+          <div class="card-meta">Ensino Fundamental</div>
+          <h3>Dados, codificação e armazenamento</h3>
+          <p>Investigue maneiras de codificar e organizar informações e converse sobre como arquivos e dados podem ser armazenados e recuperados.</p>
+        </div>
+      </article>
+
+      <article class="card" data-stage="EF2" data-axis="mundo">
+        <div>
+          <span class="card-tag">Mundo Digital</span>
+          <div class="card-meta">Anos finais</div>
+          <h3>Redes, internet e comunicação</h3>
+          <p>Discuta como dispositivos se conectam e trocam informações, considerando infraestrutura, confiabilidade e acesso à internet no território.</p>
+        </div>
+      </article>
+
+      <article class="card" id="cultura-digital" data-stage="EI EF1 EF2" data-axis="cultura">
+        <div>
+          <span class="card-tag">Cultura Digital</span>
+          <div class="card-meta">Educação Infantil e Ensino Fundamental</div>
+          <h3>Uso seguro, responsável e inclusivo</h3>
+          <p>Construa combinados para o uso de tecnologias, respeitando as pessoas, cuidando dos dados pessoais e reconhecendo diferentes necessidades de acesso.</p>
+        </div>
+      </article>
+
+      <article class="card" data-stage="EF1 EF2" data-axis="cultura">
+        <div>
+          <span class="card-tag">Cultura Digital</span>
+          <div class="card-meta">Ensino Fundamental</div>
+          <h3>Privacidade, autoria e cidadania digital</h3>
+          <p>Analise situações de compartilhamento de informações, direitos autorais, respeito, desinformação e participação cidadã nos ambientes digitais.</p>
+        </div>
+      </article>
+
+      <article class="card" data-stage="EF2" data-axis="cultura">
+        <div>
+          <span class="card-tag">Cultura Digital</span>
+          <div class="card-meta">Anos finais</div>
+          <h3>Tecnologia, sociedade e mundo do trabalho</h3>
+          <p>Debata impactos sociais, culturais, econômicos e ambientais das tecnologias digitais, relacionando-os a realidades locais e a diferentes profissões.</p>
+        </div>
+      </article>
+    </div>
+    <p class="no-results" id="noResults" hidden>Nenhum conteúdo encontrado. Revise os termos ou altere os filtros.</p>
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer>
+    <p><strong>Secretaria Municipal de Educação de Bodocó — Pernambuco</strong></p>
+    <p>Compromisso com o fortalecimento das práticas pedagógicas e valorização dos docentes municipais.</p>
+    <small>Material introdutório de apoio ao planejamento. Consulte a documentação normativa para a redação integral das habilidades.</small>
+  </footer>
+
+  <!-- Lógica de Filtro Instantâneo sem Dependências -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const stageFilter = document.getElementById('stageFilter');
+    const axisFilter = document.getElementById('axisFilter');
+    const cards = document.querySelectorAll('.card');
+    const noResults = document.getElementById('noResults');
+    const resultsStatus = document.getElementById('resultsStatus');
+
+    function normalizeText(value) {
+      return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+
+    function filterCards() {
+      const query = normalizeText(searchInput.value.trim());
+      const selectedStage = stageFilter.value;
+      const selectedAxis = axisFilter.value;
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = normalizeText(card.textContent);
+        const stages = card.dataset.stage.split(' ');
+        const axis = card.dataset.axis;
+
+        const matchesQuery = query === '' || text.includes(query);
+        const matchesStage = selectedStage === 'all' || stages.includes(selectedStage);
+        const matchesAxis = selectedAxis === 'all' || axis === selectedAxis;
+        const isVisible = matchesQuery && matchesStage && matchesAxis;
+
+        card.hidden = !isVisible;
+        if (isVisible) {
+          visibleCount += 1;
+        }
+      });
+
+      noResults.hidden = visibleCount > 0;
+      resultsStatus.textContent = `${visibleCount} ${visibleCount === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}.`;
+    }
+
+    searchInput.addEventListener('input', filterCards);
+    stageFilter.addEventListener('change', filterCards);
+    axisFilter.addEventListener('change', filterCards);
+    filterCards();
+  </script>
 </body>
 </html>
