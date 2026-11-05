@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BNCC ComputaÃ§Ã£o BodocÃ³ â€” Rede Municipal de Ensino</title>
-  <meta name="description" content="Portal de apoio Ã  BNCC ComputaÃ§Ã£o para educadores da Rede Municipal de Ensino de BodocÃ³.">
+  <title>BNCC Computação Bodocó — Rede Municipal de Ensino</title>
+  <meta name="description" content="Portal de apoio à BNCC Computação para educadores da Rede Municipal de Ensino de Bodocó.">
   <!-- Tipografia Inter para leitura fluida e profissional -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +51,7 @@
       align-items: center;
     }
 
-    /* CABEÃ‡ALHO PRINCIPAL */
+    /* CABEÇALHO PRINCIPAL */
     header {
       background-color: var(--fundo-branco);
       border-bottom: 3px solid var(--verde-bandeira);
@@ -152,7 +152,7 @@
       max-width: 900px;
     }
 
-    /* ÃREA DE BUSCA E FILTROS */
+    /* ÁREA DE BUSCA E FILTROS */
     .search-panel {
       background-color: var(--fundo-branco);
       border: 1px solid var(--verde-borda);
@@ -190,7 +190,7 @@
       box-shadow: 0 0 0 3px rgba(0, 107, 63, 0.15);
     }
 
-    /* SEÃ‡ÃƒO DE CÃ“DIGOS ALFANUMÃ‰RICOS */
+    /* SEÇÃO DE CÓDIGOS ALFANUMÉRICOS */
     .section-title {
       color: var(--verde-bandeira-escuro);
       font-size: 1.35rem;
@@ -244,7 +244,7 @@
       font-weight: 600;
     }
 
-    /* GRADE DE COMPETÃŠNCIAS / HABILIDADES */
+    /* GRADE DE COMPETÊNCIAS / HABILIDADES */
     .grid-cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -567,6 +567,49 @@
       color: #52605A;
     }
 
+    .useful-links-intro {
+      margin-bottom: 18px;
+    }
+
+    .useful-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+      gap: 16px;
+    }
+
+    .useful-link-card {
+      display: block;
+      padding: 18px;
+      border: 1px solid var(--verde-borda);
+      border-radius: 8px;
+      background: var(--fundo-pagina);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .useful-link-card:hover {
+      border-color: var(--verde-bandeira);
+      box-shadow: var(--sombra);
+      transform: translateY(-2px);
+    }
+
+    .useful-link-card:focus-visible {
+      outline: 3px solid #D6A800;
+      outline-offset: 3px;
+    }
+
+    .useful-link-card h3 {
+      margin-bottom: 8px;
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.05rem;
+    }
+
+    .useful-link-card p {
+      color: var(--cinza-texto);
+      font-size: 0.92rem;
+    }
+
     @media print {
       @page {
         margin: 18mm;
@@ -596,7 +639,7 @@
       }
     }
 
-    /* RODAPÃ‰ */
+    /* RODAPÉ */
     footer {
       background-color: var(--verde-bandeira-escuro);
       color: #FFFFFF;
@@ -652,17 +695,17 @@
 
   <!-- Barra Superior de Apoio -->
   <aside class="topbar">
-    <span>Prefeitura Municipal de BodocÃ³ â€” Secretaria Municipal de EducaÃ§Ã£o</span>
-    <span>Planejamento PedagÃ³gico & BNCC</span>
+    <span>Prefeitura Municipal de Bodocó — Secretaria Municipal de Educação</span>
+    <span>Planejamento Pedagógico & BNCC</span>
   </aside>
 
-  <!-- CabeÃ§alho Institucional -->
+  <!-- Cabeçalho Institucional -->
   <header>
     <div class="header-container">
       <div class="brand">
-        <img class="logo-pmb" src="logo-bodoco.png" alt="Prefeitura Municipal de BodocÃ³">
+        <img class="logo-pmb" src="logo-bodoco.png" alt="Prefeitura Municipal de Bodocó">
         <div class="brand-titles">
-          <h1>BNCC ComputaÃ§Ã£o BodocÃ³</h1>
+          <h1>BNCC Computação Bodocó</h1>
           <p>Rede Municipal de Ensino</p>
         </div>
       </div>
@@ -670,30 +713,31 @@
         <a href="#pensamento-computacional">Pensamento Computacional</a>
         <a href="#mundo-digital">Mundo Digital</a>
         <a href="#cultura-digital">Cultura Digital</a>
-        <a href="#consulta">Consultar conteÃºdos</a>
+        <a href="#consulta">Consultar conteúdos</a>
         <a href="#planejamento">Planejamento mensal</a>
         <a href="#eca-digital">ECA Digital</a>
+        <a href="#links-uteis">Links úteis</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Bloco de ApresentaÃ§Ã£o aos Docentes -->
+    <!-- Bloco de Apresentação aos Docentes -->
     <section class="hero-card">
-      <h2>BNCC ComputaÃ§Ã£o na rede municipal de BodocÃ³</h2>
+      <h2>BNCC Computação na rede municipal de Bodocó</h2>
       <p>
-      Um espaÃ§o de apoio ao planejamento pedagÃ³gico e Ã  integraÃ§Ã£o da ComputaÃ§Ã£o Ã s aprendizagens dos estudantes. Explore os trÃªs eixos da BNCC ComputaÃ§Ã£o e filtre os conteÃºdos por etapa de ensino.
+      Um espaço de apoio ao planejamento pedagógico e à integração da Computação às aprendizagens dos estudantes. Explore os três eixos da BNCC Computação e filtre os conteúdos por etapa de ensino.
       </p>
     </section>
 
     <section class="accessibility-tools" aria-label="Recursos de acessibilidade">
-      <p><strong>Acessibilidade:</strong> use o VLibras para traduÃ§Ã£o para Libras ou a audiodescriÃ§Ã£o e leitura em voz alta gratuita do navegador. A disponibilidade de voz depende do dispositivo e do navegador.</p>
-      <button class="accessibility-button" type="button" id="listenContentButton">Ouvir audiodescriÃ§Ã£o e conteÃºdos</button>
+      <p><strong>Acessibilidade:</strong> use o VLibras para tradução para Libras ou a audiodescrição e leitura em voz alta gratuita do navegador. A disponibilidade de voz depende do dispositivo e do navegador.</p>
+      <button class="accessibility-button" type="button" id="listenContentButton">Ouvir audiodescrição e conteúdos</button>
       <button class="accessibility-button" type="button" id="stopReadingButton" disabled>Parar leitura</button>
       <p class="accessibility-status" id="accessibilityStatus" role="status" aria-live="polite"></p>
     </section>
 
-    <h2 class="section-title" id="codigos">Como ler os cÃ³digos</h2>
+    <h2 class="section-title" id="codigos">Como ler os códigos</h2>
     <div class="code-explanation">
       <div class="code-badge-block">
         <span class="tag">EF</span>
@@ -705,7 +749,7 @@
       </div>
       <div class="code-badge-block">
         <span class="tag">CO</span>
-        <span>ComputaÃ§Ã£o</span>
+        <span>Computação</span>
       </div>
       <div class="code-badge-block">
         <span class="tag">01 em diante</span>
@@ -714,29 +758,29 @@
     </div>
 
     <p class="source-note">
-      Esta pÃ¡gina traz uma sÃ­ntese autoral para apoiar o planejamento, nÃ£o a transcriÃ§Ã£o integral da matriz nem a redaÃ§Ã£o oficial das habilidades. Consulte a
-      <a href="https://www.gov.br/mec/pt-br/cne" target="_blank" rel="noopener noreferrer">ResoluÃ§Ã£o CNE/CEB nÂº 1, de 4 de outubro de 2022, e o complemento oficial de ComputaÃ§Ã£o Ã  BNCC</a>
-      para conferir a matriz completa e sua redaÃ§Ã£o normativa.
+      Esta página traz uma síntese autoral para apoiar o planejamento, não a transcrição integral da matriz nem a redação oficial das habilidades. Consulte a
+      <a href="https://www.gov.br/mec/pt-br/cne" target="_blank" rel="noopener noreferrer">Resolução CNE/CEB nº 1, de 4 de outubro de 2022, e o complemento oficial de Computação à BNCC</a>
+      para conferir a matriz completa e sua redação normativa.
     </p>
 
-    <h2 class="section-title" id="consulta">Consultar conteÃºdos de ComputaÃ§Ã£o</h2>
+    <h2 class="section-title" id="consulta">Consultar conteúdos de Computação</h2>
     <div class="search-panel">
       <div>
         <label for="searchInput">Palavra-chave</label>
-        <input type="search" id="searchInput" placeholder="Ex.: algoritmo, dados, seguranÃ§a">
-        <small class="search-hint">Digite um tema e, ao encontrar resultados, a pÃ¡gina irÃ¡ atÃ© o primeiro conteÃºdo correspondente.</small>
+        <input type="search" id="searchInput" placeholder="Ex.: algoritmo, dados, segurança">
+        <small class="search-hint">Digite um tema e, ao encontrar resultados, a página irá até o primeiro conteúdo correspondente.</small>
       </div>
       <div>
         <label for="stageFilter">Etapa de ensino</label>
         <select id="stageFilter">
           <option value="all">Todas as etapas</option>
-          <option value="EI">EducaÃ§Ã£o Infantil</option>
-          <option value="EF1">Ensino Fundamental â€” anos iniciais</option>
-          <option value="EF2">Ensino Fundamental â€” anos finais</option>
+          <option value="EI">Educação Infantil</option>
+          <option value="EF1">Ensino Fundamental — anos iniciais</option>
+          <option value="EF2">Ensino Fundamental — anos finais</option>
         </select>
       </div>
       <div>
-        <label for="axisFilter">Eixo da ComputaÃ§Ã£o</label>
+        <label for="axisFilter">Eixo da Computação</label>
         <select id="axisFilter">
           <option value="all">Todos os eixos</option>
           <option value="pensamento">Pensamento Computacional</option>
@@ -750,56 +794,56 @@
     <div id="cardsGrid">
       <section class="axis-section" id="pensamento-computacional" aria-labelledby="thinkingTitle">
         <h3 id="thinkingTitle">Pensamento Computacional</h3>
-        <p class="axis-description">SÃ­ntese autoral para desenvolver formas de compreender problemas, reconhecer padrÃµes, organizar informaÃ§Ãµes e criar ou avaliar procedimentos e algoritmos.</p>
+        <p class="axis-description">Síntese autoral para desenvolver formas de compreender problemas, reconhecer padrões, organizar informações e criar ou avaliar procedimentos e algoritmos.</p>
         <div class="grid-cards">
           <article class="card" id="pensamento-ei" data-stage="EI" data-axis="pensamento" tabindex="-1">
             <div>
               <span class="card-tag">Pensamento Computacional</span>
-              <div class="card-meta">EducaÃ§Ã£o Infantil</div>
-              <h4>SequÃªncias, padrÃµes e instruÃ§Ãµes</h4>
-              <p>Em brincadeiras e rotinas, as crianÃ§as podem reconhecer repetiÃ§Ãµes, ordenar aÃ§Ãµes e comunicar instruÃ§Ãµes simples para resolver desafios.</p>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Sequências, padrões e instruções</h4>
+              <p>Em brincadeiras e rotinas, as crianças podem reconhecer repetições, ordenar ações e comunicar instruções simples para resolver desafios.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Perceber padrÃµes; dividir uma tarefa cotidiana em passos; ordenar e explicar instruÃ§Ãµes; comparar o que acontece quando a sequÃªncia muda.</p>
-                <h5>Atividade desplugada: caminho do robÃ´</h5>
-                <p>Em uma grade feita no chÃ£o, uma crianÃ§a dÃ¡ instruÃ§Ãµes de direÃ§Ã£o e outra percorre o caminho atÃ© uma figura. A turma testa, corrige e reorganiza os passos.</p>
-                <h5>Atividade plugada: sequÃªncia de movimentos</h5>
-                <p>Com mediaÃ§Ã£o do professor, use um aplicativo de programaÃ§Ã£o visual apropriado Ã  idade para ordenar movimentos de um personagem. Sem dispositivo, reproduza a sequÃªncia com cartÃµes e movimentos corporais.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Perceber padrões; dividir uma tarefa cotidiana em passos; ordenar e explicar instruções; comparar o que acontece quando a sequência muda.</p>
+                <h5>Atividade desplugada: caminho do robô</h5>
+                <p>Em uma grade feita no chão, uma criança dá instruções de direção e outra percorre o caminho até uma figura. A turma testa, corrige e reorganiza os passos.</p>
+                <h5>Atividade plugada: sequência de movimentos</h5>
+                <p>Com mediação do professor, use um aplicativo de programação visual apropriado à idade para ordenar movimentos de um personagem. Sem dispositivo, reproduza a sequência com cartões e movimentos corporais.</p>
               </details>
             </div>
           </article>
           <article class="card" id="pensamento-ef1" data-stage="EF1" data-axis="pensamento" tabindex="-1">
             <div>
               <span class="card-tag">Pensamento Computacional</span>
-              <div class="card-meta">Ensino Fundamental â€” anos iniciais</div>
-              <h4>Algoritmos e resoluÃ§Ã£o de problemas</h4>
-              <p>Organize soluÃ§Ãµes em passos claros, observe padrÃµes e compare procedimentos para realizar tarefas ou resolver problemas prÃ³ximos da realidade da turma.</p>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Algoritmos e resolução de problemas</h4>
+              <p>Organize soluções em passos claros, observe padrões e compare procedimentos para realizar tarefas ou resolver problemas próximos da realidade da turma.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Representar algoritmos; decompor problemas em partes; identificar repetiÃ§Ãµes; testar uma sequÃªncia e explicar como aprimorÃ¡-la.</p>
-                <h5>Atividade desplugada: instruÃ§Ãµes precisas</h5>
-                <p>Grupos escrevem instruÃ§Ãµes para montar uma figura com blocos ou formas geomÃ©tricas. Outro grupo segue as instruÃ§Ãµes, identifica ambiguidades e propÃµe melhorias.</p>
-                <h5>Atividade plugada: histÃ³ria em blocos</h5>
-                <p>Crie uma animaÃ§Ã£o curta com blocos de comando, sequÃªncia e repetiÃ§Ã£o. Sem internet, use um editor instalado ou cartÃµes de comandos.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Representar algoritmos; decompor problemas em partes; identificar repetições; testar uma sequência e explicar como aprimorá-la.</p>
+                <h5>Atividade desplugada: instruções precisas</h5>
+                <p>Grupos escrevem instruções para montar uma figura com blocos ou formas geométricas. Outro grupo segue as instruções, identifica ambiguidades e propõe melhorias.</p>
+                <h5>Atividade plugada: história em blocos</h5>
+                <p>Crie uma animação curta com blocos de comando, sequência e repetição. Sem internet, use um editor instalado ou cartões de comandos.</p>
               </details>
             </div>
           </article>
           <article class="card" id="pensamento-ef2" data-stage="EF2" data-axis="pensamento" tabindex="-1">
             <div>
               <span class="card-tag">Pensamento Computacional</span>
-              <div class="card-meta">Ensino Fundamental â€” anos finais</div>
-              <h4>DecomposiÃ§Ã£o, programaÃ§Ã£o e depuraÃ§Ã£o</h4>
-              <p>Modele problemas em etapas, compare estratÃ©gias e desenvolva procedimentos ou programas, avaliando resultados e corrigindo erros.</p>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
+              <h4>Decomposição, programação e depuração</h4>
+              <p>Modele problemas em etapas, compare estratégias e desenvolva procedimentos ou programas, avaliando resultados e corrigindo erros.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Decompor e abstrair aspectos relevantes; criar algoritmos com decisÃµes e repetiÃ§Ãµes; testar casos; depurar e justificar escolhas de soluÃ§Ã£o.</p>
-                <h5>Atividade desplugada: depuraÃ§Ã£o colaborativa</h5>
-                <p>Apresente um algoritmo em papel com erros para organizar dados de uma pesquisa escolar. As equipes simulam as instruÃ§Ãµes, localizam falhas e registram a versÃ£o corrigida.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Decompor e abstrair aspectos relevantes; criar algoritmos com decisões e repetições; testar casos; depurar e justificar escolhas de solução.</p>
+                <h5>Atividade desplugada: depuração colaborativa</h5>
+                <p>Apresente um algoritmo em papel com erros para organizar dados de uma pesquisa escolar. As equipes simulam as instruções, localizam falhas e registram a versão corrigida.</p>
                 <h5>Atividade plugada: projeto interativo</h5>
-                <p>Desenvolva um jogo ou animaÃ§Ã£o em programaÃ§Ã£o visual, teste com colegas e corrija um problema observado. Sem conexÃ£o, use ferramenta instalada e arquivos locais.</p>
+                <p>Desenvolva um jogo ou animação em programação visual, teste com colegas e corrija um problema observado. Sem conexão, use ferramenta instalada e arquivos locais.</p>
               </details>
             </div>
           </article>
@@ -808,56 +852,56 @@
 
       <section class="axis-section" id="mundo-digital" aria-labelledby="digitalWorldTitle">
         <h3 id="digitalWorldTitle">Mundo Digital</h3>
-        <p class="axis-description">SÃ­ntese autoral sobre dispositivos, dados, representaÃ§Ã£o, armazenamento e comunicaÃ§Ã£o de informaÃ§Ãµes em sistemas digitais.</p>
+        <p class="axis-description">Síntese autoral sobre dispositivos, dados, representação, armazenamento e comunicação de informações em sistemas digitais.</p>
         <div class="grid-cards">
           <article class="card" id="mundo-ei" data-stage="EI" data-axis="mundo" tabindex="-1">
             <div>
               <span class="card-tag">Mundo Digital</span>
-              <div class="card-meta">EducaÃ§Ã£o Infantil</div>
-              <h4>Dispositivos e informaÃ§Ãµes no cotidiano</h4>
-              <p>Observe tecnologias presentes no cotidiano e explore como sons, imagens, sÃ­mbolos e comandos comunicam informaÃ§Ãµes.</p>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Dispositivos e informações no cotidiano</h4>
+              <p>Observe tecnologias presentes no cotidiano e explore como sons, imagens, símbolos e comandos comunicam informações.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Reconhecer dispositivos e algumas de suas funÃ§Ãµes; distinguir informaÃ§Ãµes representadas por imagens, sons e sÃ­mbolos; perceber que um comando produz uma resposta.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Reconhecer dispositivos e algumas de suas funções; distinguir informações representadas por imagens, sons e símbolos; perceber que um comando produz uma resposta.</p>
                 <h5>Atividade desplugada: para que serve?</h5>
-                <p>Relacione cartÃµes ilustrados de dispositivos a funÃ§Ãµes como registrar, comunicar ou reproduzir um som. As crianÃ§as explicam suas escolhas.</p>
+                <p>Relacione cartões ilustrados de dispositivos a funções como registrar, comunicar ou reproduzir um som. As crianças explicam suas escolhas.</p>
                 <h5>Atividade plugada: sons e imagens</h5>
-                <p>Com equipamento da escola e supervisÃ£o, grave e reproduza um som de objeto ou natureza. Evite captar ou compartilhar imagens e dados pessoais das crianÃ§as.</p>
+                <p>Com equipamento da escola e supervisão, grave e reproduza um som de objeto ou natureza. Evite captar ou compartilhar imagens e dados pessoais das crianças.</p>
               </details>
             </div>
           </article>
           <article class="card" id="mundo-ef1" data-stage="EF1" data-axis="mundo" tabindex="-1">
             <div>
               <span class="card-tag">Mundo Digital</span>
-              <div class="card-meta">Ensino Fundamental â€” anos iniciais</div>
-              <h4>Dados, codificaÃ§Ã£o e armazenamento</h4>
-              <p>Investigue como informaÃ§Ãµes podem ser representadas, organizadas, guardadas e transmitidas, reconhecendo componentes e funÃ§Ãµes de dispositivos.</p>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Dados, codificação e armazenamento</h4>
+              <p>Investigue como informações podem ser representadas, organizadas, guardadas e transmitidas, reconhecendo componentes e funções de dispositivos.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Representar dados por cÃ³digos simples; classificar informaÃ§Ãµes; relacionar componentes fÃ­sicos e programas Ã s suas funÃ§Ãµes; compreender armazenamento e envio de dados.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Representar dados por códigos simples; classificar informações; relacionar componentes físicos e programas às suas funções; compreender armazenamento e envio de dados.</p>
                 <h5>Atividade desplugada: imagem codificada</h5>
-                <p>Em uma malha quadriculada, use uma legenda para codificar uma imagem por cores ou sÃ­mbolos. Um colega decodifica a mensagem e verifica se o cÃ³digo foi claro.</p>
-                <h5>Atividade plugada: catÃ¡logo da turma</h5>
-                <p>Crie uma tabela digital de objetos fictÃ­cios ou materiais escolares, ordenando e filtrando dados. NÃ£o use nomes, fotos ou informaÃ§Ãµes pessoais dos estudantes.</p>
+                <p>Em uma malha quadriculada, use uma legenda para codificar uma imagem por cores ou símbolos. Um colega decodifica a mensagem e verifica se o código foi claro.</p>
+                <h5>Atividade plugada: catálogo da turma</h5>
+                <p>Crie uma tabela digital de objetos fictícios ou materiais escolares, ordenando e filtrando dados. Não use nomes, fotos ou informações pessoais dos estudantes.</p>
               </details>
             </div>
           </article>
           <article class="card" id="mundo-ef2" data-stage="EF2" data-axis="mundo" tabindex="-1">
             <div>
               <span class="card-tag">Mundo Digital</span>
-              <div class="card-meta">Ensino Fundamental â€” anos finais</div>
-              <h4>Sistemas, dados e redes de comunicaÃ§Ã£o</h4>
-              <p>Analise como dados sÃ£o representados e processados e como sistemas e redes possibilitam a comunicaÃ§Ã£o entre dispositivos.</p>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
+              <h4>Sistemas, dados e redes de comunicação</h4>
+              <p>Analise como dados são representados e processados e como sistemas e redes possibilitam a comunicação entre dispositivos.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Investigar representaÃ§Ã£o e processamento de dados; descrever etapas do fluxo de informaÃ§Ã£o; compreender noÃ§Ãµes de conexÃ£o, protocolos e limites de uma rede.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Investigar representação e processamento de dados; descrever etapas do fluxo de informação; compreender noções de conexão, protocolos e limites de uma rede.</p>
                 <h5>Atividade desplugada: pacote de dados</h5>
-                <p>Simule uma rede enviando mensagens divididas em cartÃµes numerados. Teste perdas, ordem incorreta e reconstruÃ§Ã£o; discuta por que regras compartilhadas sÃ£o necessÃ¡rias.</p>
+                <p>Simule uma rede enviando mensagens divididas em cartões numerados. Teste perdas, ordem incorreta e reconstrução; discuta por que regras compartilhadas são necessárias.</p>
                 <h5>Atividade plugada: mapa de uma rede</h5>
-                <p>Use uma ferramenta de desenho para representar uma rede hipotÃ©tica da escola e os caminhos dos dados. NÃ£o registre senhas ou configuraÃ§Ãµes reais.</p>
+                <p>Use uma ferramenta de desenho para representar uma rede hipotética da escola e os caminhos dos dados. Não registre senhas ou configurações reais.</p>
               </details>
             </div>
           </article>
@@ -866,77 +910,77 @@
 
       <section class="axis-section" id="cultura-digital" aria-labelledby="digitalCultureTitle">
         <h3 id="digitalCultureTitle">Cultura Digital</h3>
-        <p class="axis-description">SÃ­ntese autoral para desenvolver participaÃ§Ã£o crÃ­tica, criativa, Ã©tica, segura e responsÃ¡vel nas prÃ¡ticas mediadas por tecnologias digitais.</p>
+        <p class="axis-description">Síntese autoral para desenvolver participação crítica, criativa, ética, segura e responsável nas práticas mediadas por tecnologias digitais.</p>
         <div class="grid-cards">
           <article class="card" id="cultura-ei" data-stage="EI" data-axis="cultura" tabindex="-1">
             <div>
               <span class="card-tag">Cultura Digital</span>
-              <div class="card-meta">EducaÃ§Ã£o Infantil</div>
-              <h4>ConvivÃªncia e cuidado com tecnologias</h4>
-              <p>Explore tecnologias como parte da vida cotidiana, com mediaÃ§Ã£o adulta, combinados de cuidado e respeito nas interaÃ§Ãµes.</p>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Convivência e cuidado com tecnologias</h4>
+              <p>Explore tecnologias como parte da vida cotidiana, com mediação adulta, combinados de cuidado e respeito nas interações.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Reconhecer diferentes finalidades das tecnologias; praticar combinados de uso; pedir ajuda a um adulto diante de algo desconfortÃ¡vel.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Reconhecer diferentes finalidades das tecnologias; praticar combinados de uso; pedir ajuda a um adulto diante de algo desconfortável.</p>
                 <h5>Atividade desplugada: combinado de cuidado</h5>
-                <p>Leia situaÃ§Ãµes ilustradas sobre compartilhar um aparelho, pedir autorizaÃ§Ã£o para fotografar e buscar ajuda. A turma cria combinados de respeito e cuidado.</p>
+                <p>Leia situações ilustradas sobre compartilhar um aparelho, pedir autorização para fotografar e buscar ajuda. A turma cria combinados de respeito e cuidado.</p>
                 <h5>Atividade plugada: leitura compartilhada</h5>
-                <p>Com o professor controlando o dispositivo, explore uma histÃ³ria digital apropriada Ã  idade e converse sobre respeito e cuidado. Uma leitura impressa tambÃ©m atende ao objetivo.</p>
+                <p>Com o professor controlando o dispositivo, explore uma história digital apropriada à idade e converse sobre respeito e cuidado. Uma leitura impressa também atende ao objetivo.</p>
               </details>
             </div>
           </article>
           <article class="card" id="cultura-ef1" data-stage="EF1" data-axis="cultura" tabindex="-1">
             <div>
               <span class="card-tag">Cultura Digital</span>
-              <div class="card-meta">Ensino Fundamental â€” anos iniciais</div>
-              <h4>Privacidade, respeito e uso responsÃ¡vel</h4>
-              <p>Desenvolva hÃ¡bitos de convivÃªncia respeitosa, proteÃ§Ã£o de informaÃ§Ãµes e avaliaÃ§Ã£o cuidadosa antes de compartilhar conteÃºdos digitais.</p>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Privacidade, respeito e uso responsável</h4>
+              <p>Desenvolva hábitos de convivência respeitosa, proteção de informações e avaliação cuidadosa antes de compartilhar conteúdos digitais.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Distinguir informaÃ§Ã£o pessoal de informaÃ§Ã£o pÃºblica; reconhecer quando pedir autorizaÃ§Ã£o; identificar conteÃºdos que precisam ser verificados ou comunicados a um adulto.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Distinguir informação pessoal de informação pública; reconhecer quando pedir autorização; identificar conteúdos que precisam ser verificados ou comunicados a um adulto.</p>
                 <h5>Atividade desplugada: pode compartilhar?</h5>
-                <p>Classifique cartÃµes fictÃ­cios em â€œpode compartilharâ€, â€œprecisa verificarâ€ e â€œnÃ£o compartilharâ€. Justifique cada escolha sem usar informaÃ§Ãµes reais da turma.</p>
-                <h5>Atividade plugada: guia de convivÃªncia</h5>
-                <p>Produza um guia digital sobre respeito e seguranÃ§a on-line, usando personagens e exemplos inventados, sem nomes, fotos ou perfis dos estudantes.</p>
+                <p>Classifique cartões fictícios em “pode compartilhar”, “precisa verificar” e “não compartilhar”. Justifique cada escolha sem usar informações reais da turma.</p>
+                <h5>Atividade plugada: guia de convivência</h5>
+                <p>Produza um guia digital sobre respeito e segurança on-line, usando personagens e exemplos inventados, sem nomes, fotos ou perfis dos estudantes.</p>
               </details>
             </div>
           </article>
           <article class="card" id="cultura-ef2" data-stage="EF2" data-axis="cultura" tabindex="-1">
             <div>
               <span class="card-tag">Cultura Digital</span>
-              <div class="card-meta">Ensino Fundamental â€” anos finais</div>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
               <h4>Cidadania, direitos e impactos digitais</h4>
-              <p>Analise criticamente participaÃ§Ã£o, privacidade, autoria, acessibilidade, desinformaÃ§Ã£o e impactos sociais das tecnologias.</p>
+              <p>Analise criticamente participação, privacidade, autoria, acessibilidade, desinformação e impactos sociais das tecnologias.</p>
               <details class="learning-details">
-                <summary>CompetÃªncias e atividades</summary>
-                <h5>Aprendizagens em foco â€” sÃ­ntese pedagÃ³gica</h5>
-                <p>Avaliar fontes e conteÃºdos; reconhecer direitos e responsabilidades; refletir sobre rastros digitais, discriminaÃ§Ã£o e impactos sociais; propor formas seguras de participaÃ§Ã£o.</p>
-                <h5>Atividade desplugada: investigaÃ§Ã£o de fontes</h5>
-                <p>Compare duas notÃ­cias fictÃ­cias com diferentes evidÃªncias e autoria. Registre critÃ©rios para verificar informaÃ§Ã£o e discuta como agir diante de ofensas ou exposiÃ§Ã£o indevida.</p>
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Avaliar fontes e conteúdos; reconhecer direitos e responsabilidades; refletir sobre rastros digitais, discriminação e impactos sociais; propor formas seguras de participação.</p>
+                <h5>Atividade desplugada: investigação de fontes</h5>
+                <p>Compare duas notícias fictícias com diferentes evidências e autoria. Registre critérios para verificar informação e discuta como agir diante de ofensas ou exposição indevida.</p>
                 <h5>Atividade plugada: campanha de cidadania digital</h5>
-                <p>Crie uma campanha informativa com fontes verificadas sobre privacidade ou desinformaÃ§Ã£o. Revise autoria, acessibilidade e consentimento antes de publicar.</p>
+                <p>Crie uma campanha informativa com fontes verificadas sobre privacidade ou desinformação. Revise autoria, acessibilidade e consentimento antes de publicar.</p>
               </details>
             </div>
           </article>
         </div>
       </section>
     </div>
-    <p class="no-results" id="noResults" hidden>Nenhum conteÃºdo encontrado. Revise os termos ou altere os filtros.</p>
+    <p class="no-results" id="noResults" hidden>Nenhum conteúdo encontrado. Revise os termos ou altere os filtros.</p>
 
     <section aria-labelledby="planningTitle">
-      <h2 class="section-title" id="planejamento">Planejamento mensal editÃ¡vel</h2>
+      <h2 class="section-title" id="planejamento">Planejamento mensal editável</h2>
       <div class="planning-panel">
-        <p class="planning-intro" id="planningTitle">Informe seu nome no campo Professor(a) para consultar somente os planejamentos associados a esse nome neste navegador. Use os botÃµes de cada planejamento para imprimir ou baixar um arquivo HTML e guardÃ¡-lo na pasta desejada. Os registros ficam apenas neste navegador e dispositivo, sem sincronizaÃ§Ã£o. O nome funciona como filtro, nÃ£o como senha: quem usa o mesmo navegador pode informar o nome de outra pessoa e acessar os registros correspondentes.</p>
+        <p class="planning-intro" id="planningTitle">Informe seu nome no campo Professor(a) para consultar somente os planejamentos associados a esse nome neste navegador. Use os botões de cada planejamento para imprimir ou baixar um arquivo HTML e guardá-lo na pasta desejada. Os registros ficam apenas neste navegador e dispositivo, sem sincronização. O nome funciona como filtro, não como senha: quem usa o mesmo navegador pode informar o nome de outra pessoa e acessar os registros correspondentes.</p>
         <form class="planning-form" id="planningForm">
           <input type="hidden" id="planId">
           <div class="form-field">
-            <label for="planMonth">MÃªs</label>
+            <label for="planMonth">Mês</label>
             <select id="planMonth" required>
-              <option value="">Selecione o mÃªs</option>
+              <option value="">Selecione o mês</option>
               <option value="Janeiro">Janeiro</option>
               <option value="Fevereiro">Fevereiro</option>
-              <option value="MarÃ§o">MarÃ§o</option>
+              <option value="Março">Março</option>
               <option value="Abril">Abril</option>
               <option value="Maio">Maio</option>
               <option value="Junho">Junho</option>
@@ -958,18 +1002,18 @@
           </div>
           <div class="form-field">
             <label for="planClass">Turma/ano escolar</label>
-            <input id="planClass" type="text" maxlength="120" placeholder="Ex.: 5Âº ano A" required>
+            <input id="planClass" type="text" maxlength="120" placeholder="Ex.: 5º ano A" required>
           </div>
           <div class="form-field full-width">
-            <label for="planTheme">Tema ou unidade temÃ¡tica</label>
-            <input id="planTheme" type="text" maxlength="180" placeholder="Ex.: algoritmos e sequÃªncias" required>
+            <label for="planTheme">Tema ou unidade temática</label>
+            <input id="planTheme" type="text" maxlength="180" placeholder="Ex.: algoritmos e sequências" required>
           </div>
           <div class="form-field full-width">
-            <label for="planObjectives">Objetivos e habilidades da BNCC ComputaÃ§Ã£o</label>
+            <label for="planObjectives">Objetivos e habilidades da BNCC Computação</label>
             <textarea id="planObjectives" maxlength="5000" required></textarea>
           </div>
           <div class="form-field full-width">
-            <label for="planActivities">Atividades e estratÃ©gias metodolÃ³gicas</label>
+            <label for="planActivities">Atividades e estratégias metodológicas</label>
             <textarea id="planActivities" maxlength="5000" required></textarea>
           </div>
           <div class="form-field">
@@ -977,12 +1021,12 @@
             <textarea id="planResources" maxlength="3000"></textarea>
           </div>
           <div class="form-field">
-            <label for="planAssessment">AvaliaÃ§Ã£o e acompanhamento</label>
+            <label for="planAssessment">Avaliação e acompanhamento</label>
             <textarea id="planAssessment" maxlength="3000"></textarea>
           </div>
           <div class="form-actions">
             <button class="action-button" type="submit" id="savePlanButton">Salvar planejamento</button>
-            <button class="action-button secondary" type="button" id="cancelEditButton" hidden>Cancelar ediÃ§Ã£o</button>
+            <button class="action-button secondary" type="button" id="cancelEditButton" hidden>Cancelar edição</button>
           </div>
           <p class="planning-status" id="planningStatus" aria-live="polite"></p>
         </form>
@@ -994,23 +1038,57 @@
     <section aria-labelledby="ecaTitle">
       <h2 class="section-title" id="eca-digital">ECA Digital</h2>
       <div class="eca-panel">
-        <h3 id="ecaTitle">ProteÃ§Ã£o de crianÃ§as e adolescentes no ambiente digital</h3>
-        <p>O ECA Digital Ã© o nome pelo qual ficou conhecida a Lei nÂº 15.211, de 17 de setembro de 2025, que estabelece regras para a proteÃ§Ã£o de crianÃ§as e adolescentes em ambientes digitais. Esta sÃ­ntese Ã© informativa e nÃ£o substitui a leitura da legislaÃ§Ã£o nem orientaÃ§Ãµes jurÃ­dicas.</p>
+        <h3 id="ecaTitle">Proteção de crianças e adolescentes no ambiente digital</h3>
+        <p>O ECA Digital é o nome pelo qual ficou conhecida a Lei nº 15.211, de 17 de setembro de 2025, que estabelece regras para a proteção de crianças e adolescentes em ambientes digitais. Esta síntese é informativa e não substitui a leitura da legislação nem orientações jurídicas.</p>
         <ul class="eca-points">
-          <li>Promove a proteÃ§Ã£o integral, a privacidade, a seguranÃ§a e o respeito aos direitos de crianÃ§as e adolescentes no uso de serviÃ§os digitais.</li>
-          <li>Orienta famÃ­lias e educadores a conversar sobre dados pessoais, exposiÃ§Ã£o de imagens, contatos on-line, conteÃºdos inadequados e formas seguras de pedir ajuda.</li>
-          <li>Incentiva a escola a prevenir e encaminhar situaÃ§Ãµes de violÃªncia ou exposiÃ§Ã£o digital conforme seus protocolos de proteÃ§Ã£o, sem divulgar dados pessoais dos estudantes.</li>
+          <li>Promove a proteção integral, a privacidade, a segurança e o respeito aos direitos de crianças e adolescentes no uso de serviços digitais.</li>
+          <li>Orienta famílias e educadores a conversar sobre dados pessoais, exposição de imagens, contatos on-line, conteúdos inadequados e formas seguras de pedir ajuda.</li>
+          <li>Incentiva a escola a prevenir e encaminhar situações de violência ou exposição digital conforme seus protocolos de proteção, sem divulgar dados pessoais dos estudantes.</li>
         </ul>
-        <p>Para conhecer o texto legal e suas disposiÃ§Ãµes, consulte a <a class="source-note-link" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" target="_blank" rel="noopener noreferrer">Lei nÂº 15.211/2025 no Portal da LegislaÃ§Ã£o do Planalto</a>.</p>
+        <p>Para conhecer o texto legal e suas disposições, consulte a <a class="source-note-link" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" target="_blank" rel="noopener noreferrer">Lei nº 15.211/2025 no Portal da Legislação do Planalto</a>.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="usefulLinksTitle">
+      <h2 class="section-title" id="links-uteis">Links úteis para professores</h2>
+      <div class="planning-panel">
+        <h3 id="usefulLinksTitle">Fontes oficiais e recursos gratuitos</h3>
+        <p class="useful-links-intro">Acesse páginas públicas de referência, formação e materiais educacionais. Os links abaixo não exigem pagamento para acesso; algumas plataformas podem solicitar cadastro para cursos ou serviços específicos.</p>
+        <div class="useful-links-grid">
+          <a class="useful-link-card" href="https://www.gov.br/mec/pt-br" target="_blank" rel="noopener noreferrer">
+            <h3>Ministério da Educação (MEC)</h3>
+            <p>Notícias, políticas públicas, programas e informações oficiais da educação brasileira.</p>
+          </a>
+          <a class="useful-link-card" href="https://basenacionalcomum.mec.gov.br/" target="_blank" rel="noopener noreferrer">
+            <h3>Base Nacional Comum Curricular</h3>
+            <p>Consulte a BNCC, seus fundamentos e documentos de referência curricular.</p>
+          </a>
+          <a class="useful-link-card" href="https://avamec.mec.gov.br/" target="_blank" rel="noopener noreferrer">
+            <h3>AVAMEC</h3>
+            <p>Ambiente Virtual de Aprendizagem do MEC, com cursos e ações de formação a distância.</p>
+          </a>
+          <a class="useful-link-card" href="https://educapes.capes.gov.br/" target="_blank" rel="noopener noreferrer">
+            <h3>EduCAPES</h3>
+            <p>Repositório público de materiais educacionais e objetos de aprendizagem.</p>
+          </a>
+          <a class="useful-link-card" href="https://computacaonaescola.ufsc.br/" target="_blank" rel="noopener noreferrer">
+            <h3>Computação na Escola — UFSC</h3>
+            <p>Iniciativas e recursos para apoiar o ensino de Computação na educação básica.</p>
+          </a>
+          <a class="useful-link-card" href="https://cieb.net.br/" target="_blank" rel="noopener noreferrer">
+            <h3>CIEB</h3>
+            <p>Estudos, referências e materiais sobre inovação e tecnologias na educação pública.</p>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- RodapÃ© Institucional -->
+  <!-- Rodapé Institucional -->
   <footer>
-    <p><strong>Secretaria Municipal de EducaÃ§Ã£o de BodocÃ³ â€” Pernambuco</strong></p>
-    <p>Compromisso com o fortalecimento das prÃ¡ticas pedagÃ³gicas e valorizaÃ§Ã£o dos docentes municipais.</p>
-    <small>Material introdutÃ³rio de apoio ao planejamento. Consulte a documentaÃ§Ã£o normativa para a redaÃ§Ã£o integral das habilidades.</small>
+    <p><strong>Secretaria Municipal de Educação de Bodocó — Pernambuco</strong></p>
+    <p>Compromisso com o fortalecimento das práticas pedagógicas e valorização dos docentes municipais.</p>
+    <small>Material introdutório de apoio ao planejamento. Consulte a documentação normativa para a redação integral das habilidades.</small>
   </footer>
 
   <div vw class="enabled">
@@ -1025,7 +1103,7 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-  <!-- LÃ³gica de Filtro InstantÃ¢neo sem DependÃªncias -->
+  <!-- Lógica de Filtro Instantâneo sem Dependências -->
   <script>
     const searchInput = document.getElementById('searchInput');
     const stageFilter = document.getElementById('stageFilter');
@@ -1043,7 +1121,7 @@
     const planningStatus = document.getElementById('planningStatus');
     const cancelEditButton = document.getElementById('cancelEditButton');
     const storageKey = 'bncc-computacao-bodoco-planejamentos-v1';
-    const months = ['Janeiro', 'Fevereiro', 'MarÃ§o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
     let plans = [];
     let storageAvailable = true;
     let searchTimer;
@@ -1087,10 +1165,10 @@
       });
 
       noResults.hidden = visibleCount > 0;
-      resultsStatus.textContent = `${visibleCount} ${visibleCount === 1 ? 'conteÃºdo encontrado' : 'conteÃºdos encontrados'}.`;
+      resultsStatus.textContent = `${visibleCount} ${visibleCount === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}.`;
       searchHint.textContent = query && firstMatch
-        ? 'Abrindo o primeiro conteÃºdo correspondenteâ€¦'
-        : 'Digite um tema e, ao encontrar resultados, a pÃ¡gina irÃ¡ atÃ© o primeiro conteÃºdo correspondente.';
+        ? 'Abrindo o primeiro conteúdo correspondente…'
+        : 'Digite um tema e, ao encontrar resultados, a página irá até o primeiro conteúdo correspondente.';
 
       if (navigateToResult && query && firstMatch) {
         window.history.replaceState(null, '', `#${firstMatch.id}`);
@@ -1103,7 +1181,7 @@
           block: 'center'
         });
         firstMatch.focus({ preventScroll: true });
-        searchHint.textContent = `ConteÃºdo localizado: ${firstMatch.querySelector('h3, h4').textContent}.`;
+        searchHint.textContent = `Conteúdo localizado: ${firstMatch.querySelector('h3, h4').textContent}.`;
       }
     }
 
@@ -1117,7 +1195,7 @@
 
     function speakNextItem() {
       if (speechItemIndex >= speechItems.length) {
-        finishReading('Leitura dos conteÃºdos visÃ­veis concluÃ­da.');
+        finishReading('Leitura dos conteúdos visíveis concluída.');
         return;
       }
 
@@ -1138,12 +1216,12 @@
 
     listenContentButton.addEventListener('click', () => {
       if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
-        accessibilityStatus.textContent = 'Este navegador nÃ£o oferece leitura em voz alta. Use o VLibras ou um recurso de acessibilidade do dispositivo.';
+        accessibilityStatus.textContent = 'Este navegador não oferece leitura em voz alta. Use o VLibras ou um recurso de acessibilidade do dispositivo.';
         return;
       }
 
       speechItems = [];
-      speechItems.push('DescriÃ§Ã£o da pÃ¡gina: Portal BNCC ComputaÃ§Ã£o BodocÃ³, da Rede Municipal de Ensino. O cabeÃ§alho exibe a logomarca da Prefeitura de BodocÃ³ e links para os eixos Pensamento Computacional, Mundo Digital e Cultura Digital, alÃ©m de consulta de conteÃºdos, planejamento mensal e informaÃ§Ãµes do ECA Digital. A seguir, o portal apresenta materiais de apoio ao ensino de ComputaÃ§Ã£o, organizados por etapa, com sÃ­nteses de aprendizagens e sugestÃµes de atividades plugadas e desplugadas.');
+      speechItems.push('Descrição da página: Portal BNCC Computação Bodocó, da Rede Municipal de Ensino. O cabeçalho exibe a logomarca da Prefeitura de Bodocó e links para os eixos Pensamento Computacional, Mundo Digital e Cultura Digital, além de consulta de conteúdos, planejamento mensal e informações do ECA Digital. A seguir, o portal apresenta materiais de apoio ao ensino de Computação, organizados por etapa, com sínteses de aprendizagens e sugestões de atividades plugadas e desplugadas.');
       axisSections.forEach(section => {
         if (section.hidden) {
           return;
@@ -1155,7 +1233,7 @@
       });
 
       if (speechItems.length === 0) {
-        accessibilityStatus.textContent = 'NÃ£o hÃ¡ conteÃºdos visÃ­veis para leitura. Altere os filtros e tente novamente.';
+        accessibilityStatus.textContent = 'Não há conteúdos visíveis para leitura. Altere os filtros e tente novamente.';
         return;
       }
 
@@ -1163,7 +1241,7 @@
       speechItemIndex = 0;
       listenContentButton.disabled = true;
       stopReadingButton.disabled = false;
-      accessibilityStatus.textContent = 'Lendo os conteÃºdos visÃ­veis em voz alta. A leitura Ã© fornecida pelo navegador.';
+      accessibilityStatus.textContent = 'Lendo os conteúdos visíveis em voz alta. A leitura é fornecida pelo navegador.';
       speakNextItem();
     });
 
@@ -1174,7 +1252,7 @@
 
     if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
       listenContentButton.disabled = true;
-      accessibilityStatus.textContent = 'A leitura em voz alta nÃ£o Ã© compatÃ­vel com este navegador. O VLibras continua disponÃ­vel.';
+      accessibilityStatus.textContent = 'A leitura em voz alta não é compatível com este navegador. O VLibras continua disponível.';
     }
 
     function showPlanningStatus(message, isError = false) {
@@ -1187,7 +1265,7 @@
         const stored = window.localStorage.getItem(storageKey);
         const parsed = stored ? JSON.parse(stored) : [];
         if (!Array.isArray(parsed)) {
-          throw new Error('O conteÃºdo salvo nÃ£o estÃ¡ no formato esperado.');
+          throw new Error('O conteúdo salvo não está no formato esperado.');
         }
         plans = parsed;
       } catch (error) {
@@ -1195,7 +1273,7 @@
         planningForm.querySelectorAll('input, select, textarea, button').forEach(control => {
           control.disabled = true;
         });
-        showPlanningStatus('NÃ£o foi possÃ­vel acessar os planejamentos salvos neste navegador. Verifique as permissÃµes de armazenamento local.', true);
+        showPlanningStatus('Não foi possível acessar os planejamentos salvos neste navegador. Verifique as permissões de armazenamento local.', true);
       }
       renderPlans();
     }
@@ -1205,7 +1283,7 @@
         window.localStorage.setItem(storageKey, JSON.stringify(plans));
         return true;
       } catch (error) {
-        showPlanningStatus('NÃ£o foi possÃ­vel salvar. Verifique o espaÃ§o disponÃ­vel e as permissÃµes de armazenamento deste navegador.', true);
+        showPlanningStatus('Não foi possível salvar. Verifique o espaço disponível e as permissões de armazenamento deste navegador.', true);
         return false;
       }
     }
@@ -1237,7 +1315,7 @@
       if (sortedPlans.length === 0) {
         const emptyMessage = document.createElement('p');
         emptyMessage.className = 'planning-empty';
-        emptyMessage.textContent = 'Ainda nÃ£o hÃ¡ planejamentos associados a este nome neste dispositivo.';
+        emptyMessage.textContent = 'Ainda não há planejamentos associados a este nome neste dispositivo.';
         savedPlans.append(emptyMessage);
         return;
       }
@@ -1246,15 +1324,15 @@
         const article = document.createElement('article');
         article.className = 'saved-plan';
         const title = document.createElement('h3');
-        title.textContent = `${plan.month} de ${plan.year} â€” ${plan.className}`;
+        title.textContent = `${plan.month} de ${plan.year} — ${plan.className}`;
         article.append(title);
         [
           ['Professor(a)', plan.teacher],
           ['Tema', plan.theme],
           ['Objetivos e habilidades', plan.objectives],
-          ['Atividades e estratÃ©gias', plan.activities],
+          ['Atividades e estratégias', plan.activities],
           ['Recursos', plan.resources],
-          ['AvaliaÃ§Ã£o', plan.assessment]
+          ['Avaliação', plan.assessment]
         ].forEach(([label, value]) => {
           const paragraph = createPlanText(label, value);
           if (paragraph) {
@@ -1314,13 +1392,13 @@
     function downloadPlan(plan) {
       const fields = [
         ['Professor(a)', plan.teacher],
-        ['MÃªs', `${plan.month} de ${plan.year}`],
+        ['Mês', `${plan.month} de ${plan.year}`],
         ['Turma/ano escolar', plan.className],
-        ['Tema ou unidade temÃ¡tica', plan.theme],
-        ['Objetivos e habilidades da BNCC ComputaÃ§Ã£o', plan.objectives],
-        ['Atividades e estratÃ©gias metodolÃ³gicas', plan.activities],
+        ['Tema ou unidade temática', plan.theme],
+        ['Objetivos e habilidades da BNCC Computação', plan.objectives],
+        ['Atividades e estratégias metodológicas', plan.activities],
         ['Recursos e materiais', plan.resources],
-        ['AvaliaÃ§Ã£o e acompanhamento', plan.assessment]
+        ['Avaliação e acompanhamento', plan.assessment]
       ];
       const fieldMarkup = fields.map(([label, value]) => value
         ? `<section><h2>${escapeHtml(label)}</h2><p>${escapeHtml(value)}</p></section>`
@@ -1330,7 +1408,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Planejamento ${escapeHtml(plan.month)} de ${escapeHtml(plan.year)} â€” ${escapeHtml(plan.teacher)}</title>
+  <title>Planejamento ${escapeHtml(plan.month)} de ${escapeHtml(plan.year)} — ${escapeHtml(plan.teacher)}</title>
   <style>
     body{max-width:850px;margin:40px auto;padding:0 24px;color:#24332b;font:16px/1.6 Arial,sans-serif}
     h1,h2{color:#004d2c}h1{font-size:1.6rem;border-bottom:2px solid #006b3f;padding-bottom:12px}
@@ -1340,7 +1418,7 @@
   </style>
 </head>
 <body>
-  <h1>Planejamento mensal â€” BNCC ComputaÃ§Ã£o BodocÃ³</h1>
+  <h1>Planejamento mensal — BNCC Computação Bodocó</h1>
   ${fieldMarkup}
   <button type="button" onclick="window.print()">Imprimir planejamento</button>
 </body>
@@ -1355,9 +1433,9 @@
         link.click();
         link.remove();
         window.setTimeout(() => URL.revokeObjectURL(fileUrl), 1000);
-        showPlanningStatus('Arquivo do planejamento baixado. Escolha a pasta de destino nas configuraÃ§Ãµes de download do navegador.');
+        showPlanningStatus('Arquivo do planejamento baixado. Escolha a pasta de destino nas configurações de download do navegador.');
       } catch (error) {
-        showPlanningStatus('NÃ£o foi possÃ­vel gerar o arquivo para download. Verifique as permissÃµes do navegador e tente novamente.', true);
+        showPlanningStatus('Não foi possível gerar o arquivo para download. Verifique as permissões do navegador e tente novamente.', true);
       }
     }
 
@@ -1411,7 +1489,7 @@
       }
       const selectedPlan = plans.find(plan => plan.id === button.dataset.id);
       if (!selectedPlan) {
-        showPlanningStatus('O planejamento selecionado nÃ£o foi encontrado. Atualize a pÃ¡gina e tente novamente.', true);
+        showPlanningStatus('O planejamento selecionado não foi encontrado. Atualize a página e tente novamente.', true);
         return;
       }
 
@@ -1445,7 +1523,7 @@
         document.getElementById('planAssessment').value = selectedPlan.assessment;
         cancelEditButton.hidden = false;
         document.getElementById('savePlanButton').textContent = 'Atualizar planejamento';
-        showPlanningStatus('Editando planejamento. Salve para confirmar as alteraÃ§Ãµes.');
+        showPlanningStatus('Editando planejamento. Salve para confirmar as alterações.');
         document.getElementById('planningForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
         document.getElementById('planMonth').focus({ preventScroll: true });
         return;
@@ -1460,7 +1538,7 @@
           return;
         }
         renderPlans();
-        showPlanningStatus('Planejamento excluÃ­do deste dispositivo.');
+        showPlanningStatus('Planejamento excluído deste dispositivo.');
       }
     });
 
