@@ -251,6 +251,21 @@
       gap: 20px;
     }
 
+    .axis-section {
+      margin: 0 0 40px;
+      scroll-margin-top: 190px;
+    }
+
+    .axis-section > h3 {
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .axis-description {
+      margin-bottom: 18px;
+    }
+
     .card {
       background-color: var(--fundo-branco);
       border: 1px solid #E2E8F0;
@@ -297,10 +312,40 @@
       margin-bottom: 10px;
     }
 
+    .card h4 {
+      color: var(--verde-bandeira-escuro);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
     .card p {
       color: var(--cinza-texto);
       font-size: 0.95rem;
       line-height: 1.5;
+    }
+
+    .card:focus {
+      outline: 3px solid var(--verde-bandeira);
+      outline-offset: 3px;
+    }
+
+    .card details {
+      margin-top: 16px;
+      border-top: 1px solid var(--verde-borda);
+      padding-top: 12px;
+    }
+
+    .card summary {
+      color: var(--verde-bandeira);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .learning-details h5 {
+      color: var(--verde-bandeira-escuro);
+      margin: 14px 0 4px;
+      font-size: 0.95rem;
     }
 
     .card[hidden], .no-results[hidden] {
@@ -330,6 +375,196 @@
     .source-note a {
       color: var(--verde-bandeira-escuro);
       font-weight: 700;
+    }
+
+    .card:focus {
+      outline: 3px solid var(--verde-bandeira);
+      outline-offset: 3px;
+    }
+
+    .search-hint {
+      display: block;
+      grid-column: 1 / -1;
+      color: #52605A;
+      font-size: 0.85rem;
+    }
+
+    .accessibility-tools {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 20px;
+      margin: 0 0 28px;
+      border: 1px solid var(--verde-borda);
+      border-radius: var(--raio);
+      background: var(--fundo-branco);
+      box-shadow: var(--sombra-card);
+    }
+
+    .accessibility-tools p {
+      flex: 1 1 280px;
+    }
+
+    .accessibility-status {
+      flex-basis: 100%;
+      min-height: 1.5em;
+      font-size: 0.9rem;
+    }
+
+    .planning-panel, .eca-panel {
+      background: var(--fundo-branco);
+      border: 1px solid var(--verde-borda);
+      border-radius: var(--raio);
+      padding: 24px;
+      margin: 0 0 28px;
+      box-shadow: var(--sombra-card);
+    }
+
+    .planning-intro, .eca-panel > p {
+      margin-bottom: 18px;
+    }
+
+    .planning-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field.full-width, .form-actions, .planning-status {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--verde-bandeira-escuro);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1.5px solid var(--verde-borda);
+      border-radius: 6px;
+      color: var(--cinza-texto);
+      background: #FFFFFF;
+      font: inherit;
+    }
+
+    .form-field textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: 3px solid rgba(0, 107, 63, 0.18);
+      border-color: var(--verde-bandeira);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .action-button {
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 6px;
+      background: var(--verde-bandeira);
+      color: #FFFFFF;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .action-button.secondary {
+      background: #E8EFEB;
+      color: var(--verde-bandeira-escuro);
+    }
+
+    .action-button.danger {
+      background: #8A2635;
+    }
+
+    .accessibility-button {
+      padding: 10px 14px;
+      border: 2px solid var(--verde-bandeira);
+      border-radius: 6px;
+      background: #FFFFFF;
+      color: var(--verde-bandeira-escuro);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .accessibility-button:hover:not(:disabled) {
+      background: var(--verde-suave);
+    }
+
+    .accessibility-button:focus-visible, .action-button:focus-visible {
+      outline: 3px solid #D6A800;
+      outline-offset: 3px;
+    }
+
+    .accessibility-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .saved-plans {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .saved-plan {
+      padding: 18px;
+      border: 1px solid var(--verde-borda);
+      border-radius: 8px;
+      background: var(--fundo-pagina);
+    }
+
+    .saved-plan h3 {
+      color: var(--verde-bandeira-escuro);
+      margin-bottom: 6px;
+    }
+
+    .saved-plan p {
+      margin-top: 8px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .saved-plan-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .planning-status {
+      min-height: 1.5em;
+      font-weight: 600;
+    }
+
+    .eca-points {
+      padding-left: 22px;
+      margin: 12px 0 20px;
+    }
+
+    .eca-points li + li {
+      margin-top: 8px;
+    }
+
+    .planning-empty {
+      color: #52605A;
     }
 
     /* RODAPÉ */
@@ -369,6 +604,12 @@
       .grid-cards {
         grid-template-columns: 1fr;
       }
+      .planning-form {
+        grid-template-columns: 1fr;
+      }
+      .planning-panel, .eca-panel {
+        padding: 18px;
+      }
     }
   </style>
 </head>
@@ -395,6 +636,8 @@
         <a href="#mundo-digital">Mundo Digital</a>
         <a href="#cultura-digital">Cultura Digital</a>
         <a href="#consulta">Consultar conteúdos</a>
+        <a href="#planejamento">Planejamento mensal</a>
+        <a href="#eca-digital">ECA Digital</a>
       </nav>
     </div>
   </header>
@@ -406,6 +649,13 @@
       <p>
       Um espaço de apoio ao planejamento pedagógico e à integração da Computação às aprendizagens dos estudantes. Explore os três eixos da BNCC Computação e filtre os conteúdos por etapa de ensino.
       </p>
+    </section>
+
+    <section class="accessibility-tools" aria-label="Recursos de acessibilidade">
+      <p><strong>Acessibilidade:</strong> use o VLibras para tradução para Libras ou a audiodescrição e leitura em voz alta gratuita do navegador. A disponibilidade de voz depende do dispositivo e do navegador.</p>
+      <button class="accessibility-button" type="button" id="listenContentButton">Ouvir audiodescrição e conteúdos</button>
+      <button class="accessibility-button" type="button" id="stopReadingButton" disabled>Parar leitura</button>
+      <p class="accessibility-status" id="accessibilityStatus" role="status" aria-live="polite"></p>
     </section>
 
     <h2 class="section-title" id="codigos">Como ler os códigos</h2>
@@ -439,6 +689,7 @@
       <div>
         <label for="searchInput">Palavra-chave</label>
         <input type="search" id="searchInput" placeholder="Ex.: algoritmo, dados, segurança">
+        <small class="search-hint">Digite um tema e, ao encontrar resultados, a página irá até o primeiro conteúdo correspondente.</small>
       </div>
       <div>
         <label for="stageFilter">Etapa de ensino</label>
@@ -461,89 +712,263 @@
     </div>
 
     <p class="results-status" id="resultsStatus" aria-live="polite"></p>
-    <div class="grid-cards" id="cardsGrid">
-      <article class="card" id="pensamento-computacional" data-stage="EI EF1" data-axis="pensamento">
-        <div>
-          <span class="card-tag">Pensamento Computacional</span>
-          <div class="card-meta">Educação Infantil e anos iniciais</div>
-          <h3>Sequências, padrões e instruções</h3>
-          <p>Proponha brincadeiras para identificar padrões, ordenar passos e descrever instruções, usando materiais concretos e situações do cotidiano.</p>
+    <div id="cardsGrid">
+      <section class="axis-section" id="pensamento-computacional" aria-labelledby="thinkingTitle">
+        <h3 id="thinkingTitle">Pensamento Computacional</h3>
+        <p class="axis-description">Síntese autoral para desenvolver formas de compreender problemas, reconhecer padrões, organizar informações e criar ou avaliar procedimentos e algoritmos.</p>
+        <div class="grid-cards">
+          <article class="card" id="pensamento-ei" data-stage="EI" data-axis="pensamento" tabindex="-1">
+            <div>
+              <span class="card-tag">Pensamento Computacional</span>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Sequências, padrões e instruções</h4>
+              <p>Em brincadeiras e rotinas, as crianças podem reconhecer repetições, ordenar ações e comunicar instruções simples para resolver desafios.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Perceber padrões; dividir uma tarefa cotidiana em passos; ordenar e explicar instruções; comparar o que acontece quando a sequência muda.</p>
+                <h5>Atividade desplugada: caminho do robô</h5>
+                <p>Em uma grade feita no chão, uma criança dá instruções de direção e outra percorre o caminho até uma figura. A turma testa, corrige e reorganiza os passos.</p>
+                <h5>Atividade plugada: sequência de movimentos</h5>
+                <p>Com mediação do professor, use um aplicativo de programação visual apropriado à idade para ordenar movimentos de um personagem. Sem dispositivo, reproduza a sequência com cartões e movimentos corporais.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="pensamento-ef1" data-stage="EF1" data-axis="pensamento" tabindex="-1">
+            <div>
+              <span class="card-tag">Pensamento Computacional</span>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Algoritmos e resolução de problemas</h4>
+              <p>Organize soluções em passos claros, observe padrões e compare procedimentos para realizar tarefas ou resolver problemas próximos da realidade da turma.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Representar algoritmos; decompor problemas em partes; identificar repetições; testar uma sequência e explicar como aprimorá-la.</p>
+                <h5>Atividade desplugada: instruções precisas</h5>
+                <p>Grupos escrevem instruções para montar uma figura com blocos ou formas geométricas. Outro grupo segue as instruções, identifica ambiguidades e propõe melhorias.</p>
+                <h5>Atividade plugada: história em blocos</h5>
+                <p>Crie uma animação curta com blocos de comando, sequência e repetição. Sem internet, use um editor instalado ou cartões de comandos.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="pensamento-ef2" data-stage="EF2" data-axis="pensamento" tabindex="-1">
+            <div>
+              <span class="card-tag">Pensamento Computacional</span>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
+              <h4>Decomposição, programação e depuração</h4>
+              <p>Modele problemas em etapas, compare estratégias e desenvolva procedimentos ou programas, avaliando resultados e corrigindo erros.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Decompor e abstrair aspectos relevantes; criar algoritmos com decisões e repetições; testar casos; depurar e justificar escolhas de solução.</p>
+                <h5>Atividade desplugada: depuração colaborativa</h5>
+                <p>Apresente um algoritmo em papel com erros para organizar dados de uma pesquisa escolar. As equipes simulam as instruções, localizam falhas e registram a versão corrigida.</p>
+                <h5>Atividade plugada: projeto interativo</h5>
+                <p>Desenvolva um jogo ou animação em programação visual, teste com colegas e corrija um problema observado. Sem conexão, use ferramenta instalada e arquivos locais.</p>
+              </details>
+            </div>
+          </article>
         </div>
-      </article>
+      </section>
 
-      <article class="card" data-stage="EF1 EF2" data-axis="pensamento">
-        <div>
-          <span class="card-tag">Pensamento Computacional</span>
-          <div class="card-meta">Ensino Fundamental</div>
-          <h3>Decomposição e algoritmos</h3>
-          <p>Divida um problema em partes menores e organize instruções para solucioná-lo, comparando estratégias com atividades desplugadas ou digitais.</p>
+      <section class="axis-section" id="mundo-digital" aria-labelledby="digitalWorldTitle">
+        <h3 id="digitalWorldTitle">Mundo Digital</h3>
+        <p class="axis-description">Síntese autoral sobre dispositivos, dados, representação, armazenamento e comunicação de informações em sistemas digitais.</p>
+        <div class="grid-cards">
+          <article class="card" id="mundo-ei" data-stage="EI" data-axis="mundo" tabindex="-1">
+            <div>
+              <span class="card-tag">Mundo Digital</span>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Dispositivos e informações no cotidiano</h4>
+              <p>Observe tecnologias presentes no cotidiano e explore como sons, imagens, símbolos e comandos comunicam informações.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Reconhecer dispositivos e algumas de suas funções; distinguir informações representadas por imagens, sons e símbolos; perceber que um comando produz uma resposta.</p>
+                <h5>Atividade desplugada: para que serve?</h5>
+                <p>Relacione cartões ilustrados de dispositivos a funções como registrar, comunicar ou reproduzir um som. As crianças explicam suas escolhas.</p>
+                <h5>Atividade plugada: sons e imagens</h5>
+                <p>Com equipamento da escola e supervisão, grave e reproduza um som de objeto ou natureza. Evite captar ou compartilhar imagens e dados pessoais das crianças.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="mundo-ef1" data-stage="EF1" data-axis="mundo" tabindex="-1">
+            <div>
+              <span class="card-tag">Mundo Digital</span>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Dados, codificação e armazenamento</h4>
+              <p>Investigue como informações podem ser representadas, organizadas, guardadas e transmitidas, reconhecendo componentes e funções de dispositivos.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Representar dados por códigos simples; classificar informações; relacionar componentes físicos e programas às suas funções; compreender armazenamento e envio de dados.</p>
+                <h5>Atividade desplugada: imagem codificada</h5>
+                <p>Em uma malha quadriculada, use uma legenda para codificar uma imagem por cores ou símbolos. Um colega decodifica a mensagem e verifica se o código foi claro.</p>
+                <h5>Atividade plugada: catálogo da turma</h5>
+                <p>Crie uma tabela digital de objetos fictícios ou materiais escolares, ordenando e filtrando dados. Não use nomes, fotos ou informações pessoais dos estudantes.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="mundo-ef2" data-stage="EF2" data-axis="mundo" tabindex="-1">
+            <div>
+              <span class="card-tag">Mundo Digital</span>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
+              <h4>Sistemas, dados e redes de comunicação</h4>
+              <p>Analise como dados são representados e processados e como sistemas e redes possibilitam a comunicação entre dispositivos.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Investigar representação e processamento de dados; descrever etapas do fluxo de informação; compreender noções de conexão, protocolos e limites de uma rede.</p>
+                <h5>Atividade desplugada: pacote de dados</h5>
+                <p>Simule uma rede enviando mensagens divididas em cartões numerados. Teste perdas, ordem incorreta e reconstrução; discuta por que regras compartilhadas são necessárias.</p>
+                <h5>Atividade plugada: mapa de uma rede</h5>
+                <p>Use uma ferramenta de desenho para representar uma rede hipotética da escola e os caminhos dos dados. Não registre senhas ou configurações reais.</p>
+              </details>
+            </div>
+          </article>
         </div>
-      </article>
+      </section>
 
-      <article class="card" data-stage="EF2" data-axis="pensamento">
-        <div>
-          <span class="card-tag">Pensamento Computacional</span>
-          <div class="card-meta">Anos finais</div>
-          <h3>Programação, testes e depuração</h3>
-          <p>Crie e avalie procedimentos ou programas, teste possibilidades, identifique erros e aperfeiçoe soluções para desafios escolares e comunitários.</p>
+      <section class="axis-section" id="cultura-digital" aria-labelledby="digitalCultureTitle">
+        <h3 id="digitalCultureTitle">Cultura Digital</h3>
+        <p class="axis-description">Síntese autoral para desenvolver participação crítica, criativa, ética, segura e responsável nas práticas mediadas por tecnologias digitais.</p>
+        <div class="grid-cards">
+          <article class="card" id="cultura-ei" data-stage="EI" data-axis="cultura" tabindex="-1">
+            <div>
+              <span class="card-tag">Cultura Digital</span>
+              <div class="card-meta">Educação Infantil</div>
+              <h4>Convivência e cuidado com tecnologias</h4>
+              <p>Explore tecnologias como parte da vida cotidiana, com mediação adulta, combinados de cuidado e respeito nas interações.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Reconhecer diferentes finalidades das tecnologias; praticar combinados de uso; pedir ajuda a um adulto diante de algo desconfortável.</p>
+                <h5>Atividade desplugada: combinado de cuidado</h5>
+                <p>Leia situações ilustradas sobre compartilhar um aparelho, pedir autorização para fotografar e buscar ajuda. A turma cria combinados de respeito e cuidado.</p>
+                <h5>Atividade plugada: leitura compartilhada</h5>
+                <p>Com o professor controlando o dispositivo, explore uma história digital apropriada à idade e converse sobre respeito e cuidado. Uma leitura impressa também atende ao objetivo.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="cultura-ef1" data-stage="EF1" data-axis="cultura" tabindex="-1">
+            <div>
+              <span class="card-tag">Cultura Digital</span>
+              <div class="card-meta">Ensino Fundamental — anos iniciais</div>
+              <h4>Privacidade, respeito e uso responsável</h4>
+              <p>Desenvolva hábitos de convivência respeitosa, proteção de informações e avaliação cuidadosa antes de compartilhar conteúdos digitais.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Distinguir informação pessoal de informação pública; reconhecer quando pedir autorização; identificar conteúdos que precisam ser verificados ou comunicados a um adulto.</p>
+                <h5>Atividade desplugada: pode compartilhar?</h5>
+                <p>Classifique cartões fictícios em “pode compartilhar”, “precisa verificar” e “não compartilhar”. Justifique cada escolha sem usar informações reais da turma.</p>
+                <h5>Atividade plugada: guia de convivência</h5>
+                <p>Produza um guia digital sobre respeito e segurança on-line, usando personagens e exemplos inventados, sem nomes, fotos ou perfis dos estudantes.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card" id="cultura-ef2" data-stage="EF2" data-axis="cultura" tabindex="-1">
+            <div>
+              <span class="card-tag">Cultura Digital</span>
+              <div class="card-meta">Ensino Fundamental — anos finais</div>
+              <h4>Cidadania, direitos e impactos digitais</h4>
+              <p>Analise criticamente participação, privacidade, autoria, acessibilidade, desinformação e impactos sociais das tecnologias.</p>
+              <details class="learning-details">
+                <summary>Competências e atividades</summary>
+                <h5>Aprendizagens em foco — síntese pedagógica</h5>
+                <p>Avaliar fontes e conteúdos; reconhecer direitos e responsabilidades; refletir sobre rastros digitais, discriminação e impactos sociais; propor formas seguras de participação.</p>
+                <h5>Atividade desplugada: investigação de fontes</h5>
+                <p>Compare duas notícias fictícias com diferentes evidências e autoria. Registre critérios para verificar informação e discuta como agir diante de ofensas ou exposição indevida.</p>
+                <h5>Atividade plugada: campanha de cidadania digital</h5>
+                <p>Crie uma campanha informativa com fontes verificadas sobre privacidade ou desinformação. Revise autoria, acessibilidade e consentimento antes de publicar.</p>
+              </details>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="card" id="mundo-digital" data-stage="EI EF1" data-axis="mundo">
-        <div>
-          <span class="card-tag">Mundo Digital</span>
-          <div class="card-meta">Educação Infantil e anos iniciais</div>
-          <h3>Dispositivos e representação de informações</h3>
-          <p>Explore como dispositivos recebem, representam, armazenam e comunicam informações, com atividades concretas e recursos disponíveis na escola.</p>
-        </div>
-      </article>
-
-      <article class="card" data-stage="EF1 EF2" data-axis="mundo">
-        <div>
-          <span class="card-tag">Mundo Digital</span>
-          <div class="card-meta">Ensino Fundamental</div>
-          <h3>Dados, codificação e armazenamento</h3>
-          <p>Investigue maneiras de codificar e organizar informações e converse sobre como arquivos e dados podem ser armazenados e recuperados.</p>
-        </div>
-      </article>
-
-      <article class="card" data-stage="EF2" data-axis="mundo">
-        <div>
-          <span class="card-tag">Mundo Digital</span>
-          <div class="card-meta">Anos finais</div>
-          <h3>Redes, internet e comunicação</h3>
-          <p>Discuta como dispositivos se conectam e trocam informações, considerando infraestrutura, confiabilidade e acesso à internet no território.</p>
-        </div>
-      </article>
-
-      <article class="card" id="cultura-digital" data-stage="EI EF1 EF2" data-axis="cultura">
-        <div>
-          <span class="card-tag">Cultura Digital</span>
-          <div class="card-meta">Educação Infantil e Ensino Fundamental</div>
-          <h3>Uso seguro, responsável e inclusivo</h3>
-          <p>Construa combinados para o uso de tecnologias, respeitando as pessoas, cuidando dos dados pessoais e reconhecendo diferentes necessidades de acesso.</p>
-        </div>
-      </article>
-
-      <article class="card" data-stage="EF1 EF2" data-axis="cultura">
-        <div>
-          <span class="card-tag">Cultura Digital</span>
-          <div class="card-meta">Ensino Fundamental</div>
-          <h3>Privacidade, autoria e cidadania digital</h3>
-          <p>Analise situações de compartilhamento de informações, direitos autorais, respeito, desinformação e participação cidadã nos ambientes digitais.</p>
-        </div>
-      </article>
-
-      <article class="card" data-stage="EF2" data-axis="cultura">
-        <div>
-          <span class="card-tag">Cultura Digital</span>
-          <div class="card-meta">Anos finais</div>
-          <h3>Tecnologia, sociedade e mundo do trabalho</h3>
-          <p>Debata impactos sociais, culturais, econômicos e ambientais das tecnologias digitais, relacionando-os a realidades locais e a diferentes profissões.</p>
-        </div>
-      </article>
+      </section>
     </div>
     <p class="no-results" id="noResults" hidden>Nenhum conteúdo encontrado. Revise os termos ou altere os filtros.</p>
+
+    <section aria-labelledby="planningTitle">
+      <h2 class="section-title" id="planejamento">Planejamento mensal editável</h2>
+      <div class="planning-panel">
+        <p class="planning-intro" id="planningTitle">Registre, edite e consulte seus planejamentos de Computação. Os registros ficam salvos apenas neste navegador e dispositivo; não são enviados nem sincronizados com outros professores.</p>
+        <form class="planning-form" id="planningForm">
+          <input type="hidden" id="planId">
+          <div class="form-field">
+            <label for="planMonth">Mês</label>
+            <select id="planMonth" required>
+              <option value="">Selecione o mês</option>
+              <option value="Janeiro">Janeiro</option>
+              <option value="Fevereiro">Fevereiro</option>
+              <option value="Março">Março</option>
+              <option value="Abril">Abril</option>
+              <option value="Maio">Maio</option>
+              <option value="Junho">Junho</option>
+              <option value="Julho">Julho</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Setembro">Setembro</option>
+              <option value="Outubro">Outubro</option>
+              <option value="Novembro">Novembro</option>
+              <option value="Dezembro">Dezembro</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="planYear">Ano</label>
+            <input id="planYear" type="number" min="2022" max="2100" required>
+          </div>
+          <div class="form-field">
+            <label for="planTeacher">Professor(a)</label>
+            <input id="planTeacher" type="text" maxlength="120" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="planClass">Turma/ano escolar</label>
+            <input id="planClass" type="text" maxlength="120" placeholder="Ex.: 5º ano A" required>
+          </div>
+          <div class="form-field full-width">
+            <label for="planTheme">Tema ou unidade temática</label>
+            <input id="planTheme" type="text" maxlength="180" placeholder="Ex.: algoritmos e sequências" required>
+          </div>
+          <div class="form-field full-width">
+            <label for="planObjectives">Objetivos e habilidades da BNCC Computação</label>
+            <textarea id="planObjectives" maxlength="5000" required></textarea>
+          </div>
+          <div class="form-field full-width">
+            <label for="planActivities">Atividades e estratégias metodológicas</label>
+            <textarea id="planActivities" maxlength="5000" required></textarea>
+          </div>
+          <div class="form-field">
+            <label for="planResources">Recursos e materiais</label>
+            <textarea id="planResources" maxlength="3000"></textarea>
+          </div>
+          <div class="form-field">
+            <label for="planAssessment">Avaliação e acompanhamento</label>
+            <textarea id="planAssessment" maxlength="3000"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="action-button" type="submit" id="savePlanButton">Salvar planejamento</button>
+            <button class="action-button secondary" type="button" id="cancelEditButton" hidden>Cancelar edição</button>
+          </div>
+          <p class="planning-status" id="planningStatus" aria-live="polite"></p>
+        </form>
+        <h3>Planejamentos salvos neste dispositivo</h3>
+        <div class="saved-plans" id="savedPlans" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="ecaTitle">
+      <h2 class="section-title" id="eca-digital">ECA Digital</h2>
+      <div class="eca-panel">
+        <h3 id="ecaTitle">Proteção de crianças e adolescentes no ambiente digital</h3>
+        <p>O ECA Digital é o nome pelo qual ficou conhecida a Lei nº 15.211, de 17 de setembro de 2025, que estabelece regras para a proteção de crianças e adolescentes em ambientes digitais. Esta síntese é informativa e não substitui a leitura da legislação nem orientações jurídicas.</p>
+        <ul class="eca-points">
+          <li>Promove a proteção integral, a privacidade, a segurança e o respeito aos direitos de crianças e adolescentes no uso de serviços digitais.</li>
+          <li>Orienta famílias e educadores a conversar sobre dados pessoais, exposição de imagens, contatos on-line, conteúdos inadequados e formas seguras de pedir ajuda.</li>
+          <li>Incentiva a escola a prevenir e encaminhar situações de violência ou exposição digital conforme seus protocolos de proteção, sem divulgar dados pessoais dos estudantes.</li>
+        </ul>
+        <p>Para conhecer o texto legal e suas disposições, consulte a <a class="source-note-link" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" target="_blank" rel="noopener noreferrer">Lei nº 15.211/2025 no Portal da Legislação do Planalto</a>.</p>
+      </div>
+    </section>
   </main>
 
   <!-- Rodapé Institucional -->
@@ -553,24 +978,53 @@
     <small>Material introdutório de apoio ao planejamento. Consulte a documentação normativa para a redação integral das habilidades.</small>
   </footer>
 
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
   <!-- Lógica de Filtro Instantâneo sem Dependências -->
   <script>
     const searchInput = document.getElementById('searchInput');
     const stageFilter = document.getElementById('stageFilter');
     const axisFilter = document.getElementById('axisFilter');
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('#cardsGrid .card');
     const noResults = document.getElementById('noResults');
     const resultsStatus = document.getElementById('resultsStatus');
+    const searchHint = document.querySelector('.search-hint');
+    const axisSections = document.querySelectorAll('.axis-section');
+    const listenContentButton = document.getElementById('listenContentButton');
+    const stopReadingButton = document.getElementById('stopReadingButton');
+    const accessibilityStatus = document.getElementById('accessibilityStatus');
+    const planningForm = document.getElementById('planningForm');
+    const savedPlans = document.getElementById('savedPlans');
+    const planningStatus = document.getElementById('planningStatus');
+    const cancelEditButton = document.getElementById('cancelEditButton');
+    const storageKey = 'bncc-computacao-bodoco-planejamentos-v1';
+    const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    let plans = [];
+    let storageAvailable = true;
+    let searchTimer;
+    let speechItems = [];
+    let speechItemIndex = 0;
 
     function normalizeText(value) {
       return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     }
 
-    function filterCards() {
+    function filterCards(navigateToResult = false) {
       const query = normalizeText(searchInput.value.trim());
       const selectedStage = stageFilter.value;
       const selectedAxis = axisFilter.value;
       let visibleCount = 0;
+      let firstMatch = null;
 
       cards.forEach(card => {
         const text = normalizeText(card.textContent);
@@ -585,16 +1039,296 @@
         card.hidden = !isVisible;
         if (isVisible) {
           visibleCount += 1;
+          firstMatch = firstMatch || card;
         }
+      });
+
+      axisSections.forEach(section => {
+        section.hidden = !section.querySelector('.card:not([hidden])');
       });
 
       noResults.hidden = visibleCount > 0;
       resultsStatus.textContent = `${visibleCount} ${visibleCount === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}.`;
+      searchHint.textContent = query && firstMatch
+        ? 'Abrindo o primeiro conteúdo correspondente…'
+        : 'Digite um tema e, ao encontrar resultados, a página irá até o primeiro conteúdo correspondente.';
+
+      if (navigateToResult && query && firstMatch) {
+        window.history.replaceState(null, '', `#${firstMatch.id}`);
+        const details = firstMatch.querySelector('details');
+        if (details) {
+          details.open = true;
+        }
+        firstMatch.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'center'
+        });
+        firstMatch.focus({ preventScroll: true });
+        searchHint.textContent = `Conteúdo localizado: ${firstMatch.querySelector('h3, h4').textContent}.`;
+      }
     }
 
-    searchInput.addEventListener('input', filterCards);
-    stageFilter.addEventListener('change', filterCards);
-    axisFilter.addEventListener('change', filterCards);
+    function finishReading(message) {
+      speechItems = [];
+      speechItemIndex = 0;
+      listenContentButton.disabled = false;
+      stopReadingButton.disabled = true;
+      accessibilityStatus.textContent = message;
+    }
+
+    function speakNextItem() {
+      if (speechItemIndex >= speechItems.length) {
+        finishReading('Leitura dos conteúdos visíveis concluída.');
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(speechItems[speechItemIndex]);
+      utterance.lang = 'pt-BR';
+      utterance.rate = 0.9;
+      utterance.onend = () => {
+        speechItemIndex += 1;
+        speakNextItem();
+      };
+      utterance.onerror = event => {
+        if (event.error !== 'canceled' && event.error !== 'interrupted') {
+          finishReading('A leitura foi interrompida pelo navegador. Tente novamente ou use o VLibras.');
+        }
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+
+    listenContentButton.addEventListener('click', () => {
+      if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+        accessibilityStatus.textContent = 'Este navegador não oferece leitura em voz alta. Use o VLibras ou um recurso de acessibilidade do dispositivo.';
+        return;
+      }
+
+      speechItems = [];
+      speechItems.push('Descrição da página: Portal BNCC Computação Bodocó, da Rede Municipal de Ensino. O cabeçalho exibe a logomarca da Prefeitura de Bodocó e links para os eixos Pensamento Computacional, Mundo Digital e Cultura Digital, além de consulta de conteúdos, planejamento mensal e informações do ECA Digital. A seguir, o portal apresenta materiais de apoio ao ensino de Computação, organizados por etapa, com sínteses de aprendizagens e sugestões de atividades plugadas e desplugadas.');
+      axisSections.forEach(section => {
+        if (section.hidden) {
+          return;
+        }
+        speechItems.push(section.querySelector('h3').textContent, section.querySelector('.axis-description').textContent);
+        section.querySelectorAll('.card:not([hidden])').forEach(card => {
+          speechItems.push(card.textContent);
+        });
+      });
+
+      if (speechItems.length === 0) {
+        accessibilityStatus.textContent = 'Não há conteúdos visíveis para leitura. Altere os filtros e tente novamente.';
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      speechItemIndex = 0;
+      listenContentButton.disabled = true;
+      stopReadingButton.disabled = false;
+      accessibilityStatus.textContent = 'Lendo os conteúdos visíveis em voz alta. A leitura é fornecida pelo navegador.';
+      speakNextItem();
+    });
+
+    stopReadingButton.addEventListener('click', () => {
+      window.speechSynthesis.cancel();
+      finishReading('Leitura interrompida.');
+    });
+
+    if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+      listenContentButton.disabled = true;
+      accessibilityStatus.textContent = 'A leitura em voz alta não é compatível com este navegador. O VLibras continua disponível.';
+    }
+
+    function showPlanningStatus(message, isError = false) {
+      planningStatus.textContent = message;
+      planningStatus.setAttribute('role', isError ? 'alert' : 'status');
+    }
+
+    function loadPlans() {
+      try {
+        const stored = window.localStorage.getItem(storageKey);
+        const parsed = stored ? JSON.parse(stored) : [];
+        if (!Array.isArray(parsed)) {
+          throw new Error('O conteúdo salvo não está no formato esperado.');
+        }
+        plans = parsed;
+      } catch (error) {
+        storageAvailable = false;
+        planningForm.querySelectorAll('input, select, textarea, button').forEach(control => {
+          control.disabled = true;
+        });
+        showPlanningStatus('Não foi possível acessar os planejamentos salvos neste navegador. Verifique as permissões de armazenamento local.', true);
+      }
+      renderPlans();
+    }
+
+    function savePlans() {
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify(plans));
+        return true;
+      } catch (error) {
+        showPlanningStatus('Não foi possível salvar. Verifique o espaço disponível e as permissões de armazenamento deste navegador.', true);
+        return false;
+      }
+    }
+
+    function createPlanText(label, value) {
+      if (!value) {
+        return null;
+      }
+      const paragraph = document.createElement('p');
+      const strong = document.createElement('strong');
+      strong.textContent = `${label}: `;
+      paragraph.append(strong, document.createTextNode(value));
+      return paragraph;
+    }
+
+    function renderPlans() {
+      savedPlans.replaceChildren();
+      const sortedPlans = [...plans].sort((a, b) => b.year - a.year || months.indexOf(b.month) - months.indexOf(a.month));
+      if (sortedPlans.length === 0) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'planning-empty';
+        emptyMessage.textContent = 'Ainda não há planejamentos salvos neste dispositivo.';
+        savedPlans.append(emptyMessage);
+        return;
+      }
+
+      sortedPlans.forEach(plan => {
+        const article = document.createElement('article');
+        article.className = 'saved-plan';
+        const title = document.createElement('h3');
+        title.textContent = `${plan.month} de ${plan.year} — ${plan.className}`;
+        article.append(title);
+        [
+          ['Professor(a)', plan.teacher],
+          ['Tema', plan.theme],
+          ['Objetivos e habilidades', plan.objectives],
+          ['Atividades e estratégias', plan.activities],
+          ['Recursos', plan.resources],
+          ['Avaliação', plan.assessment]
+        ].forEach(([label, value]) => {
+          const paragraph = createPlanText(label, value);
+          if (paragraph) {
+            article.append(paragraph);
+          }
+        });
+
+        const actions = document.createElement('div');
+        actions.className = 'saved-plan-actions';
+        const editButton = document.createElement('button');
+        editButton.className = 'action-button secondary';
+        editButton.type = 'button';
+        editButton.dataset.action = 'edit';
+        editButton.dataset.id = plan.id;
+        editButton.textContent = 'Editar';
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'action-button danger';
+        deleteButton.type = 'button';
+        deleteButton.dataset.action = 'delete';
+        deleteButton.dataset.id = plan.id;
+        deleteButton.textContent = 'Excluir';
+        actions.append(editButton, deleteButton);
+        article.append(actions);
+        savedPlans.append(article);
+      });
+    }
+
+    function resetPlanningForm() {
+      planningForm.reset();
+      document.getElementById('planId').value = '';
+      cancelEditButton.hidden = true;
+      document.getElementById('savePlanButton').textContent = 'Salvar planejamento';
+      showPlanningStatus('');
+    }
+
+    planningForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!storageAvailable || !planningForm.reportValidity()) {
+        return;
+      }
+
+      const planId = document.getElementById('planId').value;
+      const currentPlan = {
+        id: planId || (window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`),
+        month: document.getElementById('planMonth').value,
+        year: Number(document.getElementById('planYear').value),
+        teacher: document.getElementById('planTeacher').value.trim(),
+        className: document.getElementById('planClass').value.trim(),
+        theme: document.getElementById('planTheme').value.trim(),
+        objectives: document.getElementById('planObjectives').value.trim(),
+        activities: document.getElementById('planActivities').value.trim(),
+        resources: document.getElementById('planResources').value.trim(),
+        assessment: document.getElementById('planAssessment').value.trim()
+      };
+      const previousPlans = plans;
+      plans = planId
+        ? plans.map(plan => plan.id === planId ? currentPlan : plan)
+        : [...plans, currentPlan];
+
+      if (!savePlans()) {
+        plans = previousPlans;
+        renderPlans();
+        return;
+      }
+
+      renderPlans();
+      resetPlanningForm();
+      showPlanningStatus(planId ? 'Planejamento atualizado neste dispositivo.' : 'Planejamento salvo neste dispositivo.');
+    });
+
+    savedPlans.addEventListener('click', event => {
+      const button = event.target.closest('button[data-action]');
+      if (!button) {
+        return;
+      }
+      const selectedPlan = plans.find(plan => plan.id === button.dataset.id);
+      if (!selectedPlan) {
+        showPlanningStatus('O planejamento selecionado não foi encontrado. Atualize a página e tente novamente.', true);
+        return;
+      }
+
+      if (button.dataset.action === 'edit') {
+        document.getElementById('planId').value = selectedPlan.id;
+        document.getElementById('planMonth').value = selectedPlan.month;
+        document.getElementById('planYear').value = selectedPlan.year;
+        document.getElementById('planTeacher').value = selectedPlan.teacher;
+        document.getElementById('planClass').value = selectedPlan.className;
+        document.getElementById('planTheme').value = selectedPlan.theme;
+        document.getElementById('planObjectives').value = selectedPlan.objectives;
+        document.getElementById('planActivities').value = selectedPlan.activities;
+        document.getElementById('planResources').value = selectedPlan.resources;
+        document.getElementById('planAssessment').value = selectedPlan.assessment;
+        cancelEditButton.hidden = false;
+        document.getElementById('savePlanButton').textContent = 'Atualizar planejamento';
+        showPlanningStatus('Editando planejamento. Salve para confirmar as alterações.');
+        document.getElementById('planningForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('planMonth').focus({ preventScroll: true });
+        return;
+      }
+
+      if (button.dataset.action === 'delete' && window.confirm('Deseja excluir este planejamento salvo neste dispositivo?')) {
+        const previousPlans = plans;
+        plans = plans.filter(plan => plan.id !== selectedPlan.id);
+        if (!savePlans()) {
+          plans = previousPlans;
+          renderPlans();
+          return;
+        }
+        renderPlans();
+        showPlanningStatus('Planejamento excluído deste dispositivo.');
+      }
+    });
+
+    cancelEditButton.addEventListener('click', resetPlanningForm);
+    searchInput.addEventListener('input', () => {
+      filterCards();
+      window.clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(() => filterCards(true), 350);
+    });
+    stageFilter.addEventListener('change', () => filterCards(true));
+    axisFilter.addEventListener('change', () => filterCards(true));
+    document.getElementById('planYear').value = new Date().getFullYear();
+    loadPlans();
     filterCards();
   </script>
 </body>
